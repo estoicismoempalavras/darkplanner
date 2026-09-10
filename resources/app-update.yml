@@ -1,0 +1,3 @@
+provider: generic
+url: ${UPDATE_URL:-https://releases.darkplanner.com.br}
+updaterCacheDirName: darkplanner-updater

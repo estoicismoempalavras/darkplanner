@@ -1,0 +1,35 @@
+{
+  "geradoEm": "2026-09-09T20:42:42.035Z",
+  "temas": {
+    "indice": "00-INDICE.md",
+    "producao": "05-PRODUCAO.md",
+    "fluxo_edicao": "10-FLUXO-EDICAO-COMPLETA.md",
+    "fluxo_comando": "11-FLUXO-COMANDO-DIRETO.md",
+    "projetos": "12-PROJETOS-EM-ANDAMENTO.md",
+    "roteiro_destaques": "20-SKILL-ROTEIRO-DESTAQUES.md",
+    "templates": "30-SKILL-TEMPLATES.md",
+    "movimento": "40-SKILL-MOVIMENTO.md",
+    "overlays": "41-SKILL-OVERLAYS.md",
+    "avatar": "42-SKILL-AVATAR.md",
+    "transicoes": "50-SKILL-TRANSICOES.md",
+    "animacoes": "51-SKILL-ANIMACOES.md",
+    "predefinicoes": "60-PREDEFINICOES.md",
+    "verbos": "70-VERBOS.md",
+    "contrato": "80-CONTRATO.md",
+    "conferencia": "90-CONFERENCIA-E-ENTREGA.md",
+    "recusas": "99-RECUSAS.md"
+  },
+  "gerados": [
+    "70-VERBOS.md",
+    "80-CONTRATO.md",
+    "99-RECUSAS.md",
+    "conjuntos/README.md",
+    "conjuntos/transicoes.json",
+    "conjuntos/animacoes.json",
+    "conjuntos/movimento.json",
+    "conjuntos/overlays.json",
+    "conjuntos/destaques.json",
+    "conjuntos/intensidade.json"
+  ],
+  "verbos": 69
+}

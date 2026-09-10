@@ -1,0 +1,52 @@
+{
+  "gerado": true,
+  "descricao": "Conjuntos de MOVIMENTO (Ken Burns e parentes, perfis-efeitos.js). Só em IMAGEM — em vídeo o editor descarta. Rotacione sem repetir o vizinho.",
+  "conjuntos": [
+    {
+      "id": "respiro",
+      "nome": "Respiro (quase imóvel)",
+      "intensidade": 1,
+      "itens": [
+        "zoom_in",
+        "zoom_out",
+        "zoom_respiro",
+        "pan_esq",
+        "pan_dir",
+        "pan_cima",
+        "pan_baixo"
+      ]
+    },
+    {
+      "id": "classico",
+      "nome": "Clássico (zoom + pan)",
+      "intensidade": 2,
+      "itens": [
+        "zoom_in",
+        "zoom_out",
+        "zoom_respiro",
+        "pan_esq",
+        "pan_dir",
+        "pan_cima",
+        "pan_baixo",
+        "zoom_pan_esq",
+        "zoom_pan_dir",
+        "zoom_pan_cima",
+        "zoom_giro"
+      ]
+    },
+    {
+      "id": "dinamico",
+      "nome": "Dinâmico",
+      "intensidade": 3,
+      "itens": [
+        "zoom_giro",
+        "zoom_rapido"
+      ]
+    }
+  ],
+  "regras": [
+    "só imagem (vale_para do catálogo)",
+    "nunca em cena sob template",
+    "não repetir o efeito da cena vizinha"
+  ]
+}

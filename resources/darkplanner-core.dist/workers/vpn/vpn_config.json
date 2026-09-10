@@ -1,0 +1,121 @@
+{
+  "version": "1.0.0",
+  "vpns": {
+    "veepn": {
+      "extension_id": "majdfhpaihoncoakbjgbdhglocklcgno",
+      "popup_path": "src/popup/popup.html",
+      "profile_dir": "profiles/veepn",
+      "cdp_port": 9222,
+      "webstore_url": "https://chromewebstore.google.com/detail/free-vpn-for-chrome-vpn-p/majdfhpaihoncoakbjgbdhglocklcgno",
+      "free_locations": [],
+      "selectors": {
+        "connect_button_disconnected": ".connect-button--disconnected",
+        "connect_button_connected": ".connect-button--connected",
+        "connect_button_any": ".connect-button",
+        "connect_container": ".main-view__connect button",
+        "status": ".main-view__status",
+        "ip_address": ".connect-region__ip-address",
+        "location_button": ".connect-region__location",
+        "location_list": ".locations-view",
+        "simple_location_item": "div.simple-location__content",
+        "simple_location_country": "h3.simple-location__country-name",
+        "simple_location_region": "p.simple-location__region-name",
+        "multi_region_item": "div.multi-region-location",
+        "multi_region_country": "h3.multi-region-location__country-name"
+      },
+      "banners": {
+        "dismiss_texts": ["No thanks", "No, thanks", "Not now", "Skip", "Close", "Maybe later", "Continue for free", "Dismiss"],
+        "close_selectors": ["[class*='close']", "[class*='dismiss']", "[aria-label*='close']", "[aria-label*='Close']", ".free-step__btn"],
+        "hide_selectors": ["[class*='premium-banner']", "[class*='upgrade-banner']", "[class*='promo-banner']", "[class*='offer-banner']", "[role='banner']"]
+      },
+      "status_values": {
+        "connected_class": "connect-button--connected",
+        "disconnected_class": "connect-button--disconnected",
+        "status_off_keyword": "OFF"
+      }
+    },
+
+    "browsec": {
+      "extension_id": "omghfjlpggmjjaagoclmmobgdodcjboh",
+      "popup_path": "popup/popup.html",
+      "profile_dir": "profiles/browsec_explore",
+      "cdp_port": 9223,
+      "webstore_url": "https://chromewebstore.google.com/detail/browsec-vpn-free-vpn-for/omghfjlpggmjjaagoclmmobgdodcjboh",
+      "free_locations": ["Germany", "Latvia", "Lithuania", "Netherlands", "United Kingdom", "United States", "Singapore"],
+      "selectors": {
+        "connect_button": ".Inactive_Button",
+        "disconnect_button": ".Active_Button",
+        "status_connected_class": ".Active_Title",
+        "status_disconnected_class": ".Inactive_Title",
+        "status_active_block": ".block.active",
+        "change_location_button": ".ChangeButton",
+        "back_button": ".BackButton",
+        "tos_component": "first-start-agree-terms-conditions",
+        "tos_button": "first-start-agree-terms-conditions button"
+      }
+    },
+
+    "freevpnproxy": {
+      "extension_id": "jaoafpkngncfpfggjefnekilbkcpjdgp",
+      "popup_path": "popup.html",
+      "profile_dir": "profiles/freevpnproxy",
+      "cdp_port": 9225,
+      "webstore_url": "https://chromewebstore.google.com/detail/free-vpn-proxy-uvpn/jaoafpkngncfpfggjefnekilbkcpjdgp",
+      "free_locations": ["Frankfurt", "Madrid[1]", "Madrid[2]"],
+      "location_labels": {
+        "Frankfurt": "Frankfurt",
+        "Madrid[1]": "Madrid[1]",
+        "Madrid[2]": "Madrid[2]"
+      },
+      "selectors": {
+        "connect_button": ".btn.not_connected",
+        "disconnect_button": ".btn.connected",
+        "status_connected": ".btn.connected",
+        "status_not_connected": ".btn.not_connected",
+        "status_text": ".connection-box p",
+        "free_locations_tab": "Free locations"
+      }
+    },
+
+    "freevpnadbl": {
+      "extension_id": "hipncndjamdcmphkgngojegjblibadbe",
+      "popup_path": "popup.html",
+      "profile_dir": "profiles/freevpnadbl",
+      "cdp_port": 9226,
+      "webstore_url": "https://chromewebstore.google.com/detail/free-vpn-adblock-planet-v/hipncndjamdcmphkgngojegjblibadbe",
+      "free_locations": ["netherlands_free", "germany_free", "usa_new_york_free", "usa_portland_free", "united_kingdom_free", "france_free"],
+      "selectors": {
+        "connect_button": "[data-test-id='main-connect-button--connect']",
+        "disconnect_button": "[data-test-id='main-connect-button--disconnect']",
+        "protection_status": "[data-test-id='main-protection-status']",
+        "server_item_prefix": "server-item-",
+        "modal_hot_deal": "[data-test-id='modal-wrapper-hot-deal']",
+        "modal_authorization": "[data-test-id='modal-wrapper-authorization']",
+        "modal_cookies": "[data-test-id='modal-wrapper-cookies']",
+        "status_connected_text": "protegido",
+        "status_disconnected_text": "nao protegido"
+      }
+    },
+
+    "onevpn2": {
+      "extension_id": "akcocjjpkmlniicdeemdceeajlmoabhg",
+      "popup_path": "popup.html",
+      "profile_dir": "profiles/onevpn2",
+      "cdp_port": 9227,
+      "webstore_url": "https://chromewebstore.google.com/detail/1vpn-free-vpn-proxy/akcocjjpkmlniicdeemdceeajlmoabhg",
+      "free_locations": ["Amsterdam", "Singapore", "Los Angeles"],
+      "location_labels": {
+        "Amsterdam": "Amsterdã",
+        "Singapore": "Singapura",
+        "Los Angeles": "Los Angeles"
+      },
+      "selectors": {
+        "toggle_button_index": 1,
+        "location_button_index": 2,
+        "paywall_dismiss_texts": ["Continuar grátis", "Continue for free"],
+        "status_connected_class": "connected",
+        "status_disconnected_class": "disconnected"
+      }
+    }
+  }
+}

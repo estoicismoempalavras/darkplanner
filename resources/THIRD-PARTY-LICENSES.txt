@@ -1,0 +1,144 @@
+DARK PLANNER — AVISOS DE TERCEIROS / THIRD-PARTY NOTICES
+
+Este arquivo preserva os avisos de copyright e licença de componentes de terceiros
+incorporados ao produto, conforme exigido pelas respectivas licenças.
+
+==============================================================================
+1. GL TRANSITIONS (https://gl-transitions.com) — MIT License
+==============================================================================
+
+Transições portadas da coleção GL Transitions. Cada kernel é (c) do autor indicado,
+licenciado sob a MIT License (texto abaixo).
+
+  - gl_oss_advancedmosaic: Sergey Kosarevsky
+  - gl_oss_blockdissolve: nwoeanhinnogaehr
+  - gl_oss_bounce: Adrian Purser
+  - gl_oss_bowtiehorizontal: huynx
+  - gl_oss_bowtievertical: huynx
+  - gl_oss_bowtiewithparameter: KMojek
+  - gl_oss_box: lql
+  - gl_oss_butterflywavescrawler: mandubian
+  - gl_oss_circlecrop: fkuteken
+  - gl_oss_colourdistance: P-Seebauer
+  - gl_oss_crazyparametricfun: mandubian
+  - gl_oss_defocusblur: Sergey Kosarevsky
+  - gl_oss_directionalscaled: Thibaut Foussard
+  - gl_oss_doomscreentransition: Zeh Fernando
+  - gl_oss_dreamyzoom: Zeh Fernando
+  - gl_oss_dropzoneflicker: bread
+  - gl_oss_edgetransition: Woohyun Kim
+  - gl_oss_fold: nwoeanhinnogaehr
+  - gl_oss_glitchdisplace: Matt DesLauriers
+  - gl_oss_glitchmemories: Gunnar Roth
+  - gl_oss_gridflip: TimDonselaar
+  - gl_oss_hsvfade: nwoeanhinnogaehr
+  - gl_oss_horizontalclose: martiniti
+  - gl_oss_horizontalopen: martiniti
+  - gl_oss_leftright: zhmy
+  - gl_oss_mosaic: Xaychru
+  - gl_oss_overexposure: Ben Zhang
+  - gl_oss_polkadotscurtain: bobylito
+  - gl_oss_puzzleright: JustKirillS
+  - gl_oss_radial: Xaychru
+  - gl_oss_rectangle: martiniti
+  - gl_oss_rectanglecrop: martiniti
+  - gl_oss_revolveleft: bread
+  - gl_oss_rolls: Mark Craig
+  - gl_oss_rotatescalevanish: Mark Craig
+  - gl_oss_simplezoom: 0gust1
+  - gl_oss_simplezoomout: Tianshuo
+  - gl_oss_slides: Mark Craig
+  - gl_oss_starwipe: Ben Lucas
+  - gl_oss_staticfade: Ben Lucas
+  - gl_oss_stripdatamoshglitch: bread
+  - gl_oss_swirl: Sergey Kosarevsky
+  - gl_oss_tvstatic: Brandon Anzaldi
+  - gl_oss_tileswave: numb3r23
+  - gl_oss_topbottom: zhmy
+  - gl_oss_verticalclose: martiniti
+  - gl_oss_verticalopen: martiniti
+  - gl_oss_waterdrop: Pawe\u0142 P\u0142\u00f3ciennik
+  - gl_oss_zoomincircles: dycm8009
+  - gl_oss_zoomleftwipe: Handk
+  - gl_oss_zoomrigthwipe: Handk
+  - gl_oss_burn0: liubailin2020@gmail.com
+  - gl_oss_cannabisleaf: @Flexi23
+  - gl_oss_chessboard: lql
+  - gl_oss_colorphase: gre
+  - gl_oss_coordfromin: haiyoucuv
+  - gl_oss_crosshatch: pthrasher
+  - gl_oss_cube: gre
+  - gl_oss_directionaleasing: Max Plotnikov
+  - gl_oss_directionalwarp: pschroen
+  - gl_oss_dissolve: hjm1fb
+  - gl_oss_fadecolor: gre
+  - gl_oss_fadegrayscale: gre
+  - gl_oss_flyeye: gre
+  - gl_oss_fragment: lbl
+  - gl_oss_heart: gre
+  - gl_oss_hexagonalize: Fernando Kuteken
+  - gl_oss_luminancemelt: 0gust1
+  - gl_oss_morph: paniq
+  - gl_oss_mosaictransition: YueDev
+  - gl_oss_multiplyblend: Fernando Kuteken
+  - gl_oss_oldtvlostsignal: mernking gitlab: Godswork
+  - gl_oss_parametricglitch: Yoni Maltsman @friendlyspinach
+  - gl_oss_perlin: Rich Harris
+  - gl_oss_polarfunction: Fernando Kuteken
+  - gl_oss_powerkaleido: Boundless
+  - gl_oss_randomnoisex: towrabbit
+  - gl_oss_randomsquares: gre
+  - gl_oss_rotatetransition: haiyoucuv
+  - gl_oss_rotatescalefade: Fernando Kuteken
+  - gl_oss_scalein: haiyoucuv
+  - gl_oss_splitslideinhorizontal: OllyOllyOlly
+  - gl_oss_splitslideinouthorizontal: OllyOllyOlly
+  - gl_oss_splitslideinoutvertical: OllyOllyOlly
+  - gl_oss_splitslideinvertical: OllyOllyOlly
+  - gl_oss_splitslideouthorizontal: OllyOllyOlly
+  - gl_oss_splitslideoutvertical: OllyOllyOlly
+  - gl_oss_squeeze: gre
+  - gl_oss_staticwipe: Ben Lucas
+  - gl_oss_swap: gre
+  - gl_oss_tangentmotionblur: chenkai
+  - gl_oss_undulatingburnout: pthrasher
+  - gl_oss_wind: gre
+  - gl_oss_windowblinds: Fabien Benetou
+  - gl_oss_xaxistranslation: lizhongjian
+  - gl_oss_zoominout: OllyOllyOlly
+
+Avisos de copyright explícitos preservados:
+  Rolls Transition by Mark Craig (Copyright © 2022)
+  RotateScaleVanish Transition by Mark Craig (Copyright © 2022)
+  Slides Transition by Mark Craig (Copyright © 2022)
+
+MIT License:
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+==============================================================================
+2. CSSgram (https://github.com/una/CSSgram) — MIT License
+==============================================================================
+
+Copyright (c) 2015 Una Kravets. Filtros CSS portados para o pipeline de shaders.
+
+MIT License: ver texto acima.
+
+==============================================================================
+3. FONTES (Google Fonts) — SIL Open Font License 1.1 e Apache License 2.0
+==============================================================================
+
+As famílias tipográficas embarcadas são distribuídas pelo Google Fonts sob a SIL Open Font
+License 1.1 (a maioria) ou Apache License 2.0 (Roboto, Roboto Condensed, Roboto Slab, Open Sans,
+Work Sans, conforme a versão). Os textos integrais estão em:
+  https://openfontlicense.org/open-font-license-official-text/
+  https://www.apache.org/licenses/LICENSE-2.0
+As fontes são usadas sem modificação de desenho (apenas subconjunto de glifos latin/latin-ext).
+
+==============================================================================
+4. Remotion — https://remotion.dev (licença comercial adquirida pelo Dark Planner)
+==============================================================================

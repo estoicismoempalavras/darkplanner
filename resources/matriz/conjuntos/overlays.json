@@ -1,0 +1,135 @@
+{
+  "gerado": true,
+  "descricao": "Conjuntos de OVERLAYS (véus por cima da cena) por CLIMA. Overlay vai em `effects` (extra), teto 2 por cena, distribuídos com respiro (não em cenas consecutivas). A porcentagem é por CONTAGEM de cenas.",
+  "conjuntos": [
+    {
+      "id": "escuro",
+      "nome": "Escuro / atmosfera",
+      "itens": [
+        "ov_neblina",
+        "ov_poeira",
+        "ov_vinheta_pulso",
+        "ov_fumaca_rasteira",
+        "ov_particulas_lentas"
+      ]
+    },
+    {
+      "id": "luz",
+      "nome": "Luz",
+      "itens": [
+        "ov_leak",
+        "ov_facho_suave",
+        "ov_veu_dourado",
+        "ov_bokeh_suave",
+        "ov_flash_borda",
+        "fv_galaxy"
+      ]
+    },
+    {
+      "id": "vintage",
+      "nome": "Vintage / textura",
+      "itens": [
+        "ov_sujeira",
+        "ov_scanlines"
+      ]
+    }
+  ],
+  "todos": [
+    {
+      "id": "ov_vinheta_pulso",
+      "int": 1,
+      "energia": 0.25,
+      "familia": "atmosfera",
+      "precisaImagem": false
+    },
+    {
+      "id": "ov_neblina",
+      "int": 1,
+      "energia": 0.25,
+      "familia": "atmosfera",
+      "precisaImagem": false
+    },
+    {
+      "id": "ov_bokeh_suave",
+      "int": 1,
+      "energia": 0.25,
+      "familia": "atmosfera",
+      "precisaImagem": false
+    },
+    {
+      "id": "ov_facho_suave",
+      "int": 1,
+      "energia": 0.3,
+      "familia": "atmosfera",
+      "precisaImagem": false
+    },
+    {
+      "id": "ov_veu_dourado",
+      "int": 1,
+      "energia": 0.3,
+      "familia": "atmosfera",
+      "precisaImagem": false
+    },
+    {
+      "id": "ov_particulas_lentas",
+      "int": 1,
+      "energia": 0.25,
+      "familia": "atmosfera",
+      "precisaImagem": false
+    },
+    {
+      "id": "ov_poeira",
+      "int": 2,
+      "energia": 0.35,
+      "familia": "atmosfera",
+      "precisaImagem": false
+    },
+    {
+      "id": "ov_fumaca_rasteira",
+      "int": 2,
+      "energia": 0.35,
+      "familia": "atmosfera",
+      "precisaImagem": false
+    },
+    {
+      "id": "ov_leak",
+      "int": 3,
+      "energia": 0.6,
+      "familia": "luz",
+      "precisaImagem": false
+    },
+    {
+      "id": "ov_flash_borda",
+      "int": 3,
+      "energia": 0.65,
+      "familia": "luz",
+      "precisaImagem": false
+    },
+    {
+      "id": "fv_galaxy",
+      "int": 3,
+      "energia": 0.6,
+      "familia": "luz",
+      "precisaImagem": false
+    },
+    {
+      "id": "ov_scanlines",
+      "int": 2,
+      "energia": 0.5,
+      "familia": "textura",
+      "precisaImagem": false
+    },
+    {
+      "id": "ov_sujeira",
+      "int": 2,
+      "energia": 0.45,
+      "familia": "textura",
+      "precisaImagem": false
+    }
+  ],
+  "regras": [
+    "teto 2 por cena",
+    "não em cenas consecutivas",
+    "nunca junto de destaque de intensidade ≥ 4"
+  ]
+}

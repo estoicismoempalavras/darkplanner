@@ -1,0 +1,4188 @@
+{
+ "schemaVersion": 4,
+ "lang": "en",
+ "fullContract": "biblioteca-editorial.json",
+ "counts": {
+  "highlights": 207,
+  "templates": 167,
+  "transitions": 201,
+  "effects": 27,
+  "entrances": 37,
+  "filters": 74
+ },
+ "categories": [
+  {
+   "id": "abertura",
+   "label": "Openings & Chapters",
+   "labelPt": "Abertura & Capítulos"
+  },
+  {
+   "id": "identificacao",
+   "label": "People, Places & Dates",
+   "labelPt": "Pessoas, Lugares & Datas"
+  },
+  {
+   "id": "dados_provas",
+   "label": "Data & Evidence",
+   "labelPt": "Dados & Provas"
+  },
+  {
+   "id": "enfase",
+   "label": "Speech Emphasis",
+   "labelPt": "Ênfase da Fala"
+  },
+  {
+   "id": "composicao",
+   "label": "Take Composition",
+   "labelPt": "Composição de Takes"
+  },
+  {
+   "id": "atmosfera",
+   "label": "Atmosphere & Support",
+   "labelPt": "Atmosfera & Apoio"
+  },
+  {
+   "id": "transicao",
+   "label": "Subject Transitions",
+   "labelPt": "Transições de Assunto"
+  }
+ ],
+ "roles": {
+  "abertura": "Opening pomp: the first impact of the video, never in the body.",
+  "secao": "Change of subject or chapter — structure, not ornament.",
+  "destaque": "The most important sentence of the region: revelation, turn, thesis.",
+  "enfase": "Highlight inside the speech: one strong word or passage.",
+  "info": "Factual data: date, number, value, name, place, bible reference — never opinion.",
+  "apoio": "Discreet context: quote, definition, explanation.",
+  "composicao": "Multi-take composition (templates): comparison, sequence, mosaic.",
+  "conclusao": "Closing of the video: final reflection, ending — never an opening."
+ },
+ "subtypes": {
+  "info": [
+   "ano",
+   "data",
+   "hora",
+   "numero",
+   "pct",
+   "dinheiro",
+   "nome",
+   "rotulo",
+   "local",
+   "contagem",
+   "artigo",
+   "biblia"
+  ],
+  "expressao": [
+   "titulo",
+   "frase",
+   "pergunta",
+   "impacto",
+   "forte",
+   "citacao"
+  ],
+  "estrutura": [
+   "capitulo",
+   "corte"
+  ]
+ },
+ "rulesSummary": {
+  "golden": "The SPEECH anchors the reading point. A highlight enters preRoll before the first spoken word of its block (the animation impact lands exactly when the word is said), covers the WHOLE speech of the block, and breathes a tail into the silence up to the next speech. ONE highlight on screen at a time — neighbours never overlap. This holds for the local engine, for manual application and for anything the AI proposes: the intake recomputes start/end from these rules and rejects what cannot fit.",
+  "anchor": "The speech anchor of a highlight is the first spoken word OF ITS OWN TEXT, never the start of the block group: literal text is located in the word JSON (its first 2-3 words in sequence); authored/summary text must carry palavra or palavraIdx; a proposal whose text cannot be anchored inside a speech span longer than 2.5 s is rejected (texto autoral sem ancora na fala). The item appears at most preRoll (<= 0.5 s by class) before that word and keeps the tail rule after the speech ends.",
+  "timingConstants": {
+   "gapMinS": 0.1,
+   "gapSelecaoS": 1.2,
+   "espacoAntesMaxS": 0.6,
+   "folgaVizinhoS": 0.04,
+   "preRollFolgaS": 0.08,
+   "postRollMaxS": 1,
+   "fracaoVaoProxS": 0.45,
+   "durMinS": 0.6,
+   "durMinAposCorteS": 0.8,
+   "leitura": {
+    "baseS": 0.9,
+    "batidasPorS": 2.5,
+    "minS": 1.6,
+    "maxS": 6
+   },
+   "tipagemCps": [
+    6,
+    30
+   ]
+  },
+  "textReading": "reading duration of a text = 0.9s + beats / 2.5 per second, clamped 1.6–6s (a beat = a content word; connectives of the detected language do not count)",
+  "maxBeatsInWindow": "floor((min(6, max(1.6, windowS)) − 0.9) × 2.5) — a text with more beats than this (+1 tolerance) is rejected; shorten it",
+  "hard": [
+   "exclusivo: only when the block carries one of the style subtypes",
+   "subtiposProibidos: never on those subtypes",
+   "info styles with declared subtypes: only the matching subtype",
+   "manualOnly styles never (engine or AI)",
+   "strict universe: never outside the active preset kit"
+  ]
+ },
+ "highlights": [
+  {
+   "id": "glow_01",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    1,
+    7
+   ],
+   "form": "centro_titulo",
+   "use": "Clean headline for the block thesis — the most neutral glow"
+  },
+  {
+   "id": "glow_02",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    1,
+    7
+   ],
+   "form": "centro_titulo",
+   "use": "Strong glowing headline for a dramatic turn"
+  },
+  {
+   "id": "glow_03",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    1,
+    7
+   ],
+   "form": "centro_titulo",
+   "use": "Outlined headline over bright or busy footage"
+  },
+  {
+   "id": "glow_04",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    1,
+    7
+   ],
+   "form": "centro_titulo",
+   "use": "Outlined headline with partial fill: suspense hook"
+  },
+  {
+   "id": "glow_05",
+   "cat": "abertura",
+   "role": "abertura",
+   "sub": null,
+   "words": [
+    1,
+    7
+   ],
+   "form": "centro_titulo",
+   "use": "HERO opening of the video — the biggest title, once"
+  },
+  {
+   "id": "glow_06",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    1,
+    6
+   ],
+   "form": "centro_frase",
+   "use": "Compact headline for a medium sentence that must fit without shouting"
+  },
+  {
+   "id": "clean_grade_papel",
+   "cat": "atmosfera",
+   "role": "apoio",
+   "sub": null,
+   "words": [
+    3,
+    14
+   ],
+   "form": "centro_frase",
+   "use": "Short factual context or explanation that benefits from a discreet editorial grid"
+  },
+  {
+   "id": "clean_eixo_lateral",
+   "cat": "abertura",
+   "role": "secao",
+   "sub": null,
+   "words": [
+    2,
+    8
+   ],
+   "form": "centro_frase",
+   "use": "Short section turn or subtitle with restrained lateral motion"
+  },
+  {
+   "id": "clean_arquivo_escuro",
+   "cat": "atmosfera",
+   "role": "apoio",
+   "sub": null,
+   "words": [
+    3,
+    16
+   ],
+   "form": "centro_frase",
+   "use": "Documentary support, memory or historical record in a calm rhythm"
+  },
+  {
+   "id": "clean_foco_sereno",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    2,
+    10
+   ],
+   "form": "centro_frase",
+   "use": "Short conclusion or key sentence without an aggressive impact"
+  },
+  {
+   "id": "clean_citacao_serif",
+   "cat": "atmosfera",
+   "role": "apoio",
+   "sub": [
+    "citacao"
+   ],
+   "words": [
+    5,
+    22
+   ],
+   "form": "centro_frase",
+   "use": "Short literal quote or reflective sentence with an editorial pause"
+  },
+  {
+   "id": "mc_01",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    2,
+    12
+   ],
+   "form": "centro_frase",
+   "use": "Yellow text match cut: a sentence that \"cuts\" the scene with a sound bed"
+  },
+  {
+   "id": "mc_02",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    2,
+    12
+   ],
+   "form": "centro_frase",
+   "use": "Green match cut for technical/investigative tone"
+  },
+  {
+   "id": "mc_03",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    2,
+    12
+   ],
+   "form": "centro_frase",
+   "use": "Red match cut for alert, danger, urgency"
+  },
+  {
+   "id": "mc_04",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    2,
+    12
+   ],
+   "form": "centro_frase",
+   "use": "Match cut with black bar: sharp newspaper headline"
+  },
+  {
+   "id": "epico",
+   "cat": "abertura",
+   "role": "abertura",
+   "sub": null,
+   "words": [
+    1,
+    7
+   ],
+   "form": "centro_titulo",
+   "use": "Epic opening with scale and weight: video title or the big turn"
+  },
+  {
+   "id": "trailer",
+   "cat": "abertura",
+   "role": "abertura",
+   "sub": null,
+   "words": [
+    1,
+    7
+   ],
+   "form": "centro_titulo",
+   "use": "Trailer-style opening: short sentence, tension, hard cut"
+  },
+  {
+   "id": "ouro",
+   "cat": "abertura",
+   "role": "abertura",
+   "sub": null,
+   "words": [
+    1,
+    7
+   ],
+   "form": "centro_titulo",
+   "use": "Golden opening for wealth, power, empire"
+  },
+  {
+   "id": "minimal",
+   "cat": "abertura",
+   "role": "secao",
+   "sub": null,
+   "words": [
+    2,
+    12
+   ],
+   "form": "centro_frase",
+   "use": "Minimal section card for a discreet change of subject"
+  },
+  {
+   "id": "capitulo",
+   "cat": "abertura",
+   "role": "secao",
+   "sub": null,
+   "words": [
+    1,
+    7
+   ],
+   "form": "centro_titulo",
+   "use": "Declared chapter/part/section turn of the narrative"
+  },
+  {
+   "id": "hera_titulo",
+   "cat": "abertura",
+   "role": "secao",
+   "sub": null,
+   "words": [
+    2,
+    12
+   ],
+   "form": "centro_frase",
+   "use": "Section title of the Hera family (elegant badge) to name the part"
+  },
+  {
+   "id": "painel_meio",
+   "cat": "abertura",
+   "role": "secao",
+   "sub": null,
+   "words": [
+    2,
+    18
+   ],
+   "form": "painel_meio",
+   "use": "Half-screen divider panel naming the section with the live scene beside it"
+  },
+  {
+   "id": "dourado",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    2,
+    12
+   ],
+   "form": "centro_frase",
+   "use": "Sentence of value/achievement in gold"
+  },
+  {
+   "id": "branco",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    1,
+    7
+   ],
+   "form": "centro_titulo",
+   "use": "Clean white sentence when the image already has strong color"
+  },
+  {
+   "id": "impacto_red",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    1,
+    5
+   ],
+   "form": "centro_titulo",
+   "use": "Impact sentence in red: shock, alert, revelation"
+  },
+  {
+   "id": "cascata",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    2,
+    12
+   ],
+   "form": "cascata",
+   "use": "Sentence falling word by word (rhythm)"
+  },
+  {
+   "id": "revelar",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    1,
+    7
+   ],
+   "form": "centro_titulo",
+   "use": "Sentence revealed by a mask — contained surprise"
+  },
+  {
+   "id": "soco",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    1,
+    4
+   ],
+   "form": "centro_titulo",
+   "use": "Very short sentence with a visual punch (1–3 words)"
+  },
+  {
+   "id": "flip3d",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    2,
+    12
+   ],
+   "form": "centro_frase",
+   "use": "Medium sentence with a 3D flip — vlog/entertainment energy"
+  },
+  {
+   "id": "dividido",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    2,
+    12
+   ],
+   "form": "centro_frase",
+   "use": "Sentence split in two halves that meet"
+  },
+  {
+   "id": "palavras",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    2,
+    12
+   ],
+   "form": "cascata",
+   "use": "Words rising one by one at the pace of speech"
+  },
+  {
+   "id": "palavras_cima",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    2,
+    12
+   ],
+   "form": "cascata",
+   "use": "Words descending one by one (variant for slower speech)"
+  },
+  {
+   "id": "sfx_impacto",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    1,
+    7
+   ],
+   "form": "centro_titulo",
+   "use": "Sentence with an impact sound per word — trailer, hook"
+  },
+  {
+   "id": "sfx_pop",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    2,
+    12
+   ],
+   "form": "centro_frase",
+   "use": "Pops per word on a short light sentence"
+  },
+  {
+   "id": "sfx_swipe",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    2,
+    12
+   ],
+   "form": "centro_frase",
+   "use": "Swipe per word for a dynamic transition sentence"
+  },
+  {
+   "id": "sfx_cruzado",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    2,
+    12
+   ],
+   "form": "centro_frase",
+   "use": "Words crossing the screen in opposite directions — conflict, versus"
+  },
+  {
+   "id": "sfx_cruzado_cap",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    2,
+    12
+   ],
+   "form": "centro_frase",
+   "use": "Crossing words in ALL CAPS: confrontation headline"
+  },
+  {
+   "id": "sfx_cruzado_ita",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    2,
+    12
+   ],
+   "form": "centro_frase",
+   "use": "Crossing words in italics: irony, commentary"
+  },
+  {
+   "id": "sfx_cruzado_ouro",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    1,
+    7
+   ],
+   "form": "centro_titulo",
+   "use": "Crossing words in 3D gold: grand confrontation"
+  },
+  {
+   "id": "sfx_cortina",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    2,
+    12
+   ],
+   "form": "centro_frase",
+   "use": "Words opening like a curtain — staged revelation"
+  },
+  {
+   "id": "sfx_cortina_cap",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    2,
+    12
+   ],
+   "form": "centro_frase",
+   "use": "Curtain in ALL CAPS for a staged title"
+  },
+  {
+   "id": "sfx_cortina_ita",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    2,
+    12
+   ],
+   "form": "centro_frase",
+   "use": "Curtain in italics for a reflective sentence"
+  },
+  {
+   "id": "sfx_cortina_ouro",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    1,
+    7
+   ],
+   "form": "centro_titulo",
+   "use": "Curtain in 3D gold for a great revelation"
+  },
+  {
+   "id": "sfx_misto",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    2,
+    12
+   ],
+   "form": "centro_frase",
+   "use": "Mixed per-word motion for a varied medium sentence"
+  },
+  {
+   "id": "sfx_dinamico",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    1,
+    7
+   ],
+   "form": "centro_titulo",
+   "use": "Dynamic per-word motion for a short high-energy sentence"
+  },
+  {
+   "id": "din_destaque",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    3,
+    14
+   ],
+   "form": "palavra",
+   "use": "Keyword highlighted in serif inside the sentence"
+  },
+  {
+   "id": "din_serif",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    3,
+    14
+   ],
+   "form": "palavra",
+   "use": "Elegant serif sentence with the strong word highlighted"
+  },
+  {
+   "id": "din_serif_cap",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    3,
+    14
+   ],
+   "form": "palavra",
+   "use": "Elegant serif in ALL CAPS: weighty sentence"
+  },
+  {
+   "id": "din_serif_ita",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    3,
+    14
+   ],
+   "form": "palavra",
+   "use": "Elegant serif in italics: thought, reflection"
+  },
+  {
+   "id": "din_serif_ouro",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    3,
+    14
+   ],
+   "form": "palavra",
+   "use": "Elegant serif in 3D gold: achievement, glory"
+  },
+  {
+   "id": "din_cor",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    3,
+    14
+   ],
+   "form": "palavra",
+   "use": "Sentence with the strong word in an impact color"
+  },
+  {
+   "id": "carimbo",
+   "cat": "enfase",
+   "role": "enfase",
+   "sub": null,
+   "words": [
+    1,
+    4
+   ],
+   "form": "carimbo",
+   "use": "Stamp slamming on screen: short verdict (CONFIDENTIAL, GUILTY)"
+  },
+  {
+   "id": "recorte",
+   "cat": "enfase",
+   "role": "enfase",
+   "sub": null,
+   "words": [
+    1,
+    5
+   ],
+   "form": "centro_frase",
+   "use": "Emphasis cut out like a pasted headline"
+  },
+  {
+   "id": "glitch",
+   "cat": "enfase",
+   "role": "enfase",
+   "sub": null,
+   "words": [
+    1,
+    5
+   ],
+   "form": "centro_titulo",
+   "use": "Emphasis with glitch: error, failure, technology, exposed secret"
+  },
+  {
+   "id": "elastico",
+   "cat": "enfase",
+   "role": "enfase",
+   "sub": null,
+   "words": [
+    1,
+    5
+   ],
+   "form": "centro_titulo",
+   "use": "Elastic emphasis for a quick light turn"
+  },
+  {
+   "id": "din_sub",
+   "cat": "enfase",
+   "role": "enfase",
+   "sub": null,
+   "words": [
+    3,
+    14
+   ],
+   "form": "sublinhado",
+   "use": "Dynamic underline on the spoken word"
+  },
+  {
+   "id": "din_marca",
+   "cat": "enfase",
+   "role": "enfase",
+   "sub": null,
+   "words": [
+    3,
+    14
+   ],
+   "form": "marca",
+   "use": "Marker on the strong word/passage"
+  },
+  {
+   "id": "din_marca_cap",
+   "cat": "enfase",
+   "role": "enfase",
+   "sub": null,
+   "words": [
+    3,
+    14
+   ],
+   "form": "marca",
+   "use": "3D marker in ALL CAPS"
+  },
+  {
+   "id": "din_marca_ita",
+   "cat": "enfase",
+   "role": "enfase",
+   "sub": null,
+   "words": [
+    3,
+    14
+   ],
+   "form": "marca",
+   "use": "3D marker in italics: highlighted irony"
+  },
+  {
+   "id": "din_marca_ouro",
+   "cat": "enfase",
+   "role": "enfase",
+   "sub": null,
+   "words": [
+    3,
+    14
+   ],
+   "form": "marca",
+   "use": "3D gold marker: highlight of achievement"
+  },
+  {
+   "id": "cartaz_classico",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    1,
+    7
+   ],
+   "form": "centro_titulo",
+   "use": "Classic poster for a period title sentence"
+  },
+  {
+   "id": "cartaz_3d",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    1,
+    7
+   ],
+   "form": "centro_titulo",
+   "use": "3D poster for a title sentence with volume"
+  },
+  {
+   "id": "cartaz_vivo",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    1,
+    7
+   ],
+   "form": "centro_titulo",
+   "use": "Vivid colored poster for an energetic title sentence"
+  },
+  {
+   "id": "hera_marca",
+   "cat": "enfase",
+   "role": "enfase",
+   "sub": null,
+   "words": [
+    3,
+    14
+   ],
+   "form": "marca",
+   "use": "Hera family marker (elegant) on the strong word"
+  },
+  {
+   "id": "marca_azul",
+   "cat": "enfase",
+   "role": "enfase",
+   "sub": null,
+   "words": [
+    3,
+    14
+   ],
+   "form": "marca",
+   "use": "White per-word emphasis over blue: institutional tone"
+  },
+  {
+   "id": "marca_verm",
+   "cat": "enfase",
+   "role": "enfase",
+   "sub": null,
+   "words": [
+    3,
+    14
+   ],
+   "form": "marca",
+   "use": "Red marker: danger, error, alert"
+  },
+  {
+   "id": "marca_preto",
+   "cat": "enfase",
+   "role": "enfase",
+   "sub": null,
+   "words": [
+    3,
+    14
+   ],
+   "form": "marca",
+   "use": "Black marker: sobriety, journalism"
+  },
+  {
+   "id": "marca_3d_azul",
+   "cat": "enfase",
+   "role": "enfase",
+   "sub": null,
+   "words": [
+    3,
+    14
+   ],
+   "form": "marca",
+   "use": "3D blue marker: technology, science"
+  },
+  {
+   "id": "marca_3d_verm",
+   "cat": "enfase",
+   "role": "enfase",
+   "sub": null,
+   "words": [
+    3,
+    14
+   ],
+   "form": "marca",
+   "use": "3D red marker: urgency with volume"
+  },
+  {
+   "id": "marca_3d_ouro",
+   "cat": "enfase",
+   "role": "enfase",
+   "sub": null,
+   "words": [
+    3,
+    14
+   ],
+   "form": "marca",
+   "use": "3D gold marker: award, value"
+  },
+  {
+   "id": "horizonte_cruzado",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    1,
+    7
+   ],
+   "form": "centro_titulo",
+   "use": "Sentence crossing the horizon — journey, crossing"
+  },
+  {
+   "id": "navy_acende",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    2,
+    12
+   ],
+   "form": "centro_frase",
+   "use": "Sentence lighting up over navy: investigative/tech tone"
+  },
+  {
+   "id": "navy_italico",
+   "cat": "atmosfera",
+   "role": "apoio",
+   "sub": null,
+   "words": [
+    2,
+    12
+   ],
+   "form": "centro_frase",
+   "use": "Italic support over navy: commentary, source"
+  },
+  {
+   "id": "navy_sub",
+   "cat": "enfase",
+   "role": "enfase",
+   "sub": null,
+   "words": [
+    2,
+    12
+   ],
+   "form": "centro_frase",
+   "use": "Underlined emphasis over navy"
+  },
+  {
+   "id": "selo_ano",
+   "cat": "identificacao",
+   "role": "info",
+   "sub": [
+    "ano",
+    "data"
+   ],
+   "excl": true,
+   "words": [
+    1,
+    4
+   ],
+   "form": "cartao_dado",
+   "use": "When the passage contains an explicit YEAR that marks the narrative"
+  },
+  {
+   "id": "doc_min",
+   "cat": "identificacao",
+   "role": "info",
+   "sub": [
+    "nome",
+    "rotulo"
+   ],
+   "words": [
+    2,
+    16
+   ],
+   "form": "doc",
+   "use": "Minimal identification (name + label) in documentary style"
+  },
+  {
+   "id": "arquivo",
+   "cat": "identificacao",
+   "role": "info",
+   "sub": [
+    "ano",
+    "data",
+    "rotulo"
+   ],
+   "words": [
+    1,
+    4
+   ],
+   "form": "cartao_dado",
+   "use": "ARCHIVE card for a year/date with a record stamp"
+  },
+  {
+   "id": "barra",
+   "cat": "identificacao",
+   "role": "info",
+   "sub": [
+    "nome",
+    "rotulo"
+   ],
+   "words": [
+    1,
+    6
+   ],
+   "form": "terco",
+   "use": "Bar lower third: name + label of who speaks/appears"
+  },
+  {
+   "id": "estat",
+   "cat": "dados_provas",
+   "role": "info",
+   "sub": [
+    "pct",
+    "numero",
+    "dinheiro"
+   ],
+   "words": [
+    1,
+    4
+   ],
+   "form": "cartao_dado",
+   "use": "Statistics card: percentage, number or amount"
+  },
+  {
+   "id": "selo_doc",
+   "cat": "identificacao",
+   "role": "info",
+   "sub": [
+    "rotulo",
+    "nome",
+    "ano"
+   ],
+   "words": [
+    1,
+    4
+   ],
+   "form": "cartao_dado",
+   "use": "Documentary badge for label/name/year (corner)"
+  },
+  {
+   "id": "numerao",
+   "cat": "dados_provas",
+   "role": "info",
+   "sub": [
+    "numero",
+    "pct",
+    "dinheiro"
+   ],
+   "words": [
+    1,
+    4
+   ],
+   "form": "centro_titulo",
+   "use": "Giant number for a leading amount/percentage"
+  },
+  {
+   "id": "selo_doc_desliza",
+   "cat": "identificacao",
+   "role": "info",
+   "sub": [
+    "ano",
+    "data",
+    "rotulo"
+   ],
+   "words": [
+    1,
+    4
+   ],
+   "form": "cartao_dado",
+   "use": "Sliding doc badge: year/date in transition"
+  },
+  {
+   "id": "selo_doc_bold",
+   "cat": "identificacao",
+   "role": "info",
+   "sub": [
+    "nome",
+    "rotulo"
+   ],
+   "words": [
+    1,
+    4
+   ],
+   "form": "cartao_dado",
+   "use": "Bold doc badge for a weighty name/label"
+  },
+  {
+   "id": "hera_nome",
+   "cat": "identificacao",
+   "role": "info",
+   "sub": [
+    "nome"
+   ],
+   "words": [
+    1,
+    6
+   ],
+   "form": "terco",
+   "use": "Hera lower third: name of the person appearing"
+  },
+  {
+   "id": "hera_lateral",
+   "cat": "identificacao",
+   "role": "info",
+   "sub": [
+    "nome",
+    "rotulo"
+   ],
+   "words": [
+    1,
+    6
+   ],
+   "form": "terco",
+   "use": "Hera side badge: name + label on the edge"
+  },
+  {
+   "id": "hera_duplo",
+   "cat": "identificacao",
+   "role": "info",
+   "sub": [
+    "nome"
+   ],
+   "words": [
+    1,
+    6
+   ],
+   "form": "terco",
+   "use": "Hera with two lines: name + role"
+  },
+  {
+   "id": "hera_cracha",
+   "cat": "identificacao",
+   "role": "info",
+   "sub": [
+    "nome",
+    "rotulo"
+   ],
+   "words": [
+    1,
+    6
+   ],
+   "form": "terco",
+   "use": "Hera badge: name and title as a credential"
+  },
+  {
+   "id": "hera_selo",
+   "cat": "identificacao",
+   "role": "info",
+   "sub": [
+    "nome",
+    "rotulo"
+   ],
+   "words": [
+    1,
+    4
+   ],
+   "form": "selo_canto",
+   "use": "Hera corner badge: short name"
+  },
+  {
+   "id": "selo_nome",
+   "cat": "identificacao",
+   "role": "info",
+   "sub": [
+    "nome"
+   ],
+   "words": [
+    1,
+    4
+   ],
+   "form": "selo_canto",
+   "use": "Corner name badge to identify who speaks"
+  },
+  {
+   "id": "selo_dado",
+   "cat": "dados_provas",
+   "role": "info",
+   "sub": [
+    "ano",
+    "data",
+    "numero",
+    "rotulo"
+   ],
+   "words": [
+    1,
+    4
+   ],
+   "form": "cartao_dado",
+   "use": "Corner data badge (year/date/number)"
+  },
+  {
+   "id": "selo_alerta",
+   "cat": "dados_provas",
+   "role": "info",
+   "sub": [
+    "rotulo",
+    "numero"
+   ],
+   "words": [
+    1,
+    4
+   ],
+   "form": "selo_canto",
+   "use": "ALERT badge for a short warning/risk"
+  },
+  {
+   "id": "selo_faixa",
+   "cat": "dados_provas",
+   "role": "info",
+   "sub": [
+    "ano",
+    "data",
+    "numero",
+    "rotulo"
+   ],
+   "words": [
+    1,
+    4
+   ],
+   "form": "selo_canto",
+   "use": "Black band badge: year/date/number with sobriety"
+  },
+  {
+   "id": "selo_cascata",
+   "cat": "identificacao",
+   "role": "info",
+   "sub": [
+    "nome",
+    "rotulo"
+   ],
+   "words": [
+    1,
+    4
+   ],
+   "form": "selo_canto",
+   "use": "Cascade badge: name/label in two beats"
+  },
+  {
+   "id": "selo_onda",
+   "cat": "identificacao",
+   "role": "info",
+   "sub": [
+    "nome"
+   ],
+   "words": [
+    1,
+    4
+   ],
+   "form": "selo_canto",
+   "use": "Wave badge: name with soft motion"
+  },
+  {
+   "id": "selo_split",
+   "cat": "dados_provas",
+   "role": "info",
+   "sub": [
+    "rotulo",
+    "numero"
+   ],
+   "words": [
+    1,
+    4
+   ],
+   "form": "selo_canto",
+   "use": "Split badge: label + number divided"
+  },
+  {
+   "id": "painel_data",
+   "cat": "identificacao",
+   "role": "info",
+   "sub": [
+    "data",
+    "ano",
+    "hora"
+   ],
+   "excl": true,
+   "words": [
+    1,
+    10
+   ],
+   "form": "slab",
+   "use": "Full-height side panel for date/time/year"
+  },
+  {
+   "id": "painel_arquivo",
+   "cat": "identificacao",
+   "role": "info",
+   "sub": [
+    "rotulo",
+    "ano",
+    "nome"
+   ],
+   "words": [
+    1,
+    10
+   ],
+   "form": "slab",
+   "use": "Archive panel: label + year + name as a file card"
+  },
+  {
+   "id": "doc_numero",
+   "cat": "dados_provas",
+   "role": "info",
+   "sub": [
+    "numero",
+    "dinheiro",
+    "pct"
+   ],
+   "words": [
+    1,
+    8
+   ],
+   "form": "centro_titulo",
+   "use": "Explicit amount/measure — number, money or percentage in evidence"
+  },
+  {
+   "id": "doc_termo",
+   "cat": "identificacao",
+   "role": "info",
+   "sub": [
+    "rotulo",
+    "nome"
+   ],
+   "words": [
+    3,
+    24
+   ],
+   "form": "doc",
+   "use": "Term + definition on a documentary grid"
+  },
+  {
+   "id": "doc_tempo",
+   "cat": "identificacao",
+   "role": "info",
+   "sub": [
+    "ano",
+    "data"
+   ],
+   "excl": true,
+   "words": [
+    3,
+    14
+   ],
+   "form": "centro_frase",
+   "use": "Explicit date/year anchoring the chronology"
+  },
+  {
+   "id": "doc_vs",
+   "cat": "dados_provas",
+   "role": "info",
+   "sub": [
+    "numero",
+    "dinheiro"
+   ],
+   "excl": true,
+   "words": [
+    4,
+    12
+   ],
+   "form": "centro_titulo",
+   "use": "Versus: two numbers/amounts in confrontation"
+  },
+  {
+   "id": "doc_pct",
+   "cat": "dados_provas",
+   "role": "info",
+   "sub": [
+    "pct"
+   ],
+   "excl": true,
+   "words": [
+    1,
+    10
+   ],
+   "form": "digitacao",
+   "use": "Explicit percentage with a central role in the sentence"
+  },
+  {
+   "id": "doc_mira",
+   "cat": "dados_provas",
+   "role": "info",
+   "sub": [
+    "ano",
+    "numero",
+    "data"
+   ],
+   "words": [
+    1,
+    9
+   ],
+   "form": "centro_titulo",
+   "use": "Documentary crosshair over a year/number/date"
+  },
+  {
+   "id": "doc_mira_quadro",
+   "cat": "dados_provas",
+   "role": "info",
+   "sub": [
+    "ano",
+    "numero",
+    "data",
+    "rotulo"
+   ],
+   "words": [
+    1,
+    9
+   ],
+   "form": "centro_titulo",
+   "use": "Crosshair with frame: figure + framed label"
+  },
+  {
+   "id": "doc_radar",
+   "cat": "dados_provas",
+   "role": "info",
+   "sub": [
+    "numero",
+    "ano",
+    "data"
+   ],
+   "words": [
+    1,
+    9
+   ],
+   "form": "centro_titulo",
+   "use": "Radar: number/year/date with a sweep"
+  },
+  {
+   "id": "doc_scanner",
+   "cat": "identificacao",
+   "role": "info",
+   "sub": [
+    "ano",
+    "rotulo",
+    "nome"
+   ],
+   "words": [
+    1,
+    9
+   ],
+   "form": "centro_titulo",
+   "use": "Scanner: year/label/name read like a document"
+  },
+  {
+   "id": "doc_contador",
+   "cat": "dados_provas",
+   "role": "info",
+   "sub": [
+    "numero",
+    "dinheiro",
+    "pct"
+   ],
+   "words": [
+    1,
+    10
+   ],
+   "form": "centro_titulo",
+   "use": "Statistics counter rolling up to the value"
+  },
+  {
+   "id": "doc_citacao",
+   "cat": "enfase",
+   "role": "apoio",
+   "sub": null,
+   "words": [
+    4,
+    30
+   ],
+   "form": "citacao",
+   "use": "Literal quote with source — period speech, statement, record"
+  },
+  {
+   "id": "doc_lower",
+   "cat": "identificacao",
+   "role": "info",
+   "sub": [
+    "nome",
+    "rotulo"
+   ],
+   "words": [
+    1,
+    10
+   ],
+   "form": "doc",
+   "use": "Identity lower third: name — role"
+  },
+  {
+   "id": "gancho_frio",
+   "cat": "abertura",
+   "role": "abertura",
+   "sub": null,
+   "words": [
+    3,
+    14
+   ],
+   "form": "centro_titulo",
+   "use": "Cold opening hook: \"what you did not know\""
+  },
+  {
+   "id": "doc_tempo_marcos",
+   "cat": "identificacao",
+   "role": "info",
+   "sub": [
+    "ano",
+    "data"
+   ],
+   "excl": true,
+   "words": [
+    3,
+    20
+   ],
+   "form": "centro_frase",
+   "use": "Chronology in milestones: several years in a line"
+  },
+  {
+   "id": "doc_tempo_vert",
+   "cat": "identificacao",
+   "role": "info",
+   "sub": [
+    "ano",
+    "data"
+   ],
+   "excl": true,
+   "words": [
+    3,
+    18
+   ],
+   "form": "centro_frase",
+   "use": "Vertical chronology: a range of years"
+  },
+  {
+   "id": "doc_tempo_salto",
+   "cat": "identificacao",
+   "role": "info",
+   "sub": [
+    "ano",
+    "data"
+   ],
+   "excl": true,
+   "words": [
+    2,
+    12
+   ],
+   "form": "centro_titulo",
+   "use": "Time jump: \"30 years later\""
+  },
+  {
+   "id": "digitacao",
+   "cat": "atmosfera",
+   "role": "apoio",
+   "sub": null,
+   "words": [
+    1,
+    16
+   ],
+   "form": "digitacao",
+   "use": "Typed support: system/file text read over time"
+  },
+  {
+   "id": "suave",
+   "cat": "atmosfera",
+   "role": "apoio",
+   "sub": null,
+   "words": [
+    2,
+    12
+   ],
+   "form": "centro_frase",
+   "use": "Soft support for a calm quote/comment"
+  },
+  {
+   "id": "onda",
+   "cat": "atmosfera",
+   "role": "apoio",
+   "sub": null,
+   "words": [
+    2,
+    12
+   ],
+   "form": "centro_frase",
+   "use": "Wave support for fluid, explanatory speech"
+  },
+  {
+   "id": "doc_serif",
+   "cat": "enfase",
+   "role": "apoio",
+   "sub": null,
+   "words": [
+    4,
+    30
+   ],
+   "form": "citacao",
+   "use": "Quote in documentary serif (source, record)"
+  },
+  {
+   "id": "citacao",
+   "cat": "enfase",
+   "role": "apoio",
+   "sub": null,
+   "words": [
+    4,
+    30
+   ],
+   "form": "citacao",
+   "use": "Classic literal quote with quotation marks"
+  },
+  {
+   "id": "selo_doc_2l",
+   "cat": "atmosfera",
+   "role": "apoio",
+   "sub": null,
+   "words": [
+    2,
+    16
+   ],
+   "form": "doc",
+   "use": "Two-line support with a documentary badge"
+  },
+  {
+   "id": "sfx_elevador",
+   "cat": "atmosfera",
+   "role": "apoio",
+   "sub": null,
+   "words": [
+    2,
+    12
+   ],
+   "form": "centro_frase",
+   "use": "Support rising like an elevator: light comment"
+  },
+  {
+   "id": "sfx_suave",
+   "cat": "atmosfera",
+   "role": "apoio",
+   "sub": null,
+   "words": [
+    2,
+    12
+   ],
+   "form": "centro_frase",
+   "use": "Soft per-word support: a quote read calmly"
+  },
+  {
+   "id": "sfx_suave_cap",
+   "cat": "atmosfera",
+   "role": "apoio",
+   "sub": null,
+   "words": [
+    2,
+    12
+   ],
+   "form": "centro_frase",
+   "use": "Soft support in ALL CAPS"
+  },
+  {
+   "id": "sfx_suave_ita",
+   "cat": "atmosfera",
+   "role": "apoio",
+   "sub": null,
+   "words": [
+    2,
+    12
+   ],
+   "form": "centro_frase",
+   "use": "Soft support in italics: quote/thought"
+  },
+  {
+   "id": "sfx_suave_ouro",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    2,
+    12
+   ],
+   "form": "centro_frase",
+   "use": "Soft 3D gold highlight: a sentence of value read calmly"
+  },
+  {
+   "id": "sfx_flutua",
+   "cat": "atmosfera",
+   "role": "apoio",
+   "sub": null,
+   "words": [
+    2,
+    12
+   ],
+   "form": "centro_frase",
+   "use": "Floating support: background comment"
+  },
+  {
+   "id": "ed_selo_data",
+   "cat": "identificacao",
+   "role": "info",
+   "sub": [
+    "data"
+   ],
+   "excl": true,
+   "words": [
+    1,
+    8
+   ],
+   "form": "doc",
+   "use": "Explicit historical date in the passage"
+  },
+  {
+   "id": "ed_ano_monumento",
+   "cat": "identificacao",
+   "role": "info",
+   "sub": [
+    "ano"
+   ],
+   "excl": true,
+   "words": [
+    1,
+    6
+   ],
+   "form": "centro_titulo",
+   "use": "Isolated year that marks an era"
+  },
+  {
+   "id": "ed_selo_capitulo",
+   "cat": "abertura",
+   "role": "secao",
+   "sub": [
+    "capitulo"
+   ],
+   "excl": true,
+   "words": [
+    1,
+    6
+   ],
+   "form": "centro_titulo",
+   "use": "Chapter/part/section declared in the script"
+  },
+  {
+   "id": "ed_selo_artigo",
+   "cat": "dados_provas",
+   "role": "info",
+   "sub": [
+    "artigo"
+   ],
+   "excl": true,
+   "words": [
+    2,
+    20
+   ],
+   "form": "doc",
+   "use": "Explicit normative reference — article, law, rule, clause"
+  },
+  {
+   "id": "ed_contagem",
+   "cat": "dados_provas",
+   "role": "info",
+   "sub": [
+    "contagem"
+   ],
+   "excl": true,
+   "words": [
+    2,
+    8
+   ],
+   "form": "doc",
+   "use": "Announced enumeration — N reasons/signs/mistakes/steps"
+  },
+  {
+   "id": "ed_pct_callout",
+   "cat": "dados_provas",
+   "role": "info",
+   "sub": [
+    "pct"
+   ],
+   "excl": true,
+   "words": [
+    1,
+    10
+   ],
+   "form": "doc",
+   "use": "Percentage central to the argument"
+  },
+  {
+   "id": "ed_valor_callout",
+   "cat": "dados_provas",
+   "role": "info",
+   "sub": [
+    "dinheiro"
+   ],
+   "excl": true,
+   "words": [
+    1,
+    10
+   ],
+   "form": "doc",
+   "use": "Explicit monetary value in evidence"
+  },
+  {
+   "id": "ed_local_id",
+   "cat": "identificacao",
+   "role": "info",
+   "sub": [
+    "local"
+   ],
+   "excl": true,
+   "words": [
+    1,
+    6
+   ],
+   "form": "centro_titulo",
+   "use": "Explicit place that situates the scene — city, country, region"
+  },
+  {
+   "id": "ed_rotulo_tecnico",
+   "cat": "identificacao",
+   "role": "info",
+   "sub": [
+    "rotulo",
+    "nome"
+   ],
+   "words": [
+    1,
+    14
+   ],
+   "form": "doc",
+   "use": "Named object/artifact/element that deserves a technical label"
+  },
+  {
+   "id": "ed_numero_monumental",
+   "cat": "dados_provas",
+   "role": "info",
+   "sub": [
+    "numero",
+    "pct",
+    "dinheiro"
+   ],
+   "words": [
+    1,
+    5
+   ],
+   "form": "centro_titulo",
+   "use": "Striking amount — number, percentage or value dominating the screen"
+  },
+  {
+   "id": "ed_tag_dado",
+   "cat": "dados_provas",
+   "role": "info",
+   "sub": [
+    "numero",
+    "pct",
+    "dinheiro",
+    "ano",
+    "rotulo"
+   ],
+   "words": [
+    2,
+    14
+   ],
+   "form": "doc",
+   "use": "Short factual information that deserves the DATA stamp"
+  },
+  {
+   "id": "ed_citacao_bold",
+   "cat": "enfase",
+   "role": "apoio",
+   "sub": [
+    "citacao"
+   ],
+   "excl": true,
+   "words": [
+    4,
+    26
+   ],
+   "form": "citacao",
+   "use": "Literal quote in quotation marks with editorial force"
+  },
+  {
+   "id": "ed_pull_quote",
+   "cat": "enfase",
+   "role": "apoio",
+   "sub": [
+    "citacao"
+   ],
+   "words": [
+    6,
+    34
+   ],
+   "form": "citacao",
+   "use": "Long quote/statement breathing beside the editorial line"
+  },
+  {
+   "id": "ed_sussurro",
+   "cat": "atmosfera",
+   "role": "apoio",
+   "sub": null,
+   "words": [
+    2,
+    10
+   ],
+   "form": "centro_frase",
+   "use": "Cinema whisper: almost mute support for an intimate sentence"
+  },
+  {
+   "id": "ed_proclamacao_2l",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    2,
+    8
+   ],
+   "form": "centro_titulo",
+   "use": "Two-line proclamation: solemn statement"
+  },
+  {
+   "id": "ed_pilha_dramatica",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    2,
+    10
+   ],
+   "form": "centro_titulo",
+   "use": "Dramatic stack: sentence piled up with weight"
+  },
+  {
+   "id": "ed_corte_lamina",
+   "cat": "transicao",
+   "role": "destaque",
+   "sub": [
+    "corte"
+   ],
+   "excl": true,
+   "words": [
+    2,
+    10
+   ],
+   "form": "centro_titulo",
+   "use": "Topic turn or reveal on a block that starts on a scene cut — the blade sweeps on the cut and the lines enter from alternating sides"
+  },
+  {
+   "id": "ed_corte_flash",
+   "cat": "transicao",
+   "role": "destaque",
+   "sub": [
+    "corte"
+   ],
+   "excl": true,
+   "words": [
+    2,
+    10
+   ],
+   "form": "centro_titulo",
+   "use": "Shock, sudden reveal or time jump on a cut — a white flash covers the cut and the whole stack appears at once"
+  },
+  {
+   "id": "ed_corte_preto",
+   "cat": "transicao",
+   "role": "destaque",
+   "sub": [
+    "corte"
+   ],
+   "excl": true,
+   "words": [
+    2,
+    10
+   ],
+   "form": "centro_titulo",
+   "use": "Silence, death, loss or a dramatic pause on a cut — three black frames, then the words rise out of blur one by one"
+  },
+  {
+   "id": "ed_corte_persiana",
+   "cat": "transicao",
+   "role": "destaque",
+   "sub": [
+    "corte"
+   ],
+   "excl": true,
+   "words": [
+    2,
+    10
+   ],
+   "form": "centro_titulo",
+   "use": "Gradual discovery or a secret revealed on a cut — the blinds close the scene and reveal the lines top to bottom"
+  },
+  {
+   "id": "ed_corte_split",
+   "cat": "transicao",
+   "role": "destaque",
+   "sub": [
+    "corte"
+   ],
+   "excl": true,
+   "words": [
+    2,
+    10
+   ],
+   "form": "centro_titulo",
+   "use": "Two sides, conflict or comparison on a block that opens on a cut — the halves of the screen and the lines come from opposite sides"
+  },
+  {
+   "id": "ed_corte_glitch",
+   "cat": "transicao",
+   "role": "destaque",
+   "sub": [
+    "corte"
+   ],
+   "excl": true,
+   "words": [
+    2,
+    10
+   ],
+   "form": "centro_titulo",
+   "use": "Failure, interference, sabotage or technology on a cut — RGB bars and a one-instant jitter"
+  },
+  {
+   "id": "ed_corte_zoom",
+   "cat": "transicao",
+   "role": "destaque",
+   "sub": [
+    "corte"
+   ],
+   "excl": true,
+   "words": [
+    2,
+    10
+   ],
+   "form": "centro_titulo",
+   "use": "Getting closer, focus or \"look closer\" on a cut — the vignette snaps shut like a zoom punch and the stack comes from afar"
+  },
+  {
+   "id": "ed_corte_luz",
+   "cat": "transicao",
+   "role": "destaque",
+   "sub": [
+    "corte"
+   ],
+   "excl": true,
+   "words": [
+    2,
+    10
+   ],
+   "form": "centro_titulo",
+   "use": "Dawn, hope, memory or passage of time on a cut — a warm light leak crosses and the last line wears light"
+  },
+  {
+   "id": "ed_corte_iris",
+   "cat": "transicao",
+   "role": "destaque",
+   "sub": [
+    "corte"
+   ],
+   "excl": true,
+   "words": [
+    2,
+    10
+   ],
+   "form": "centro_titulo",
+   "use": "Attention, focus on a detail or a character entrance on a cut — the iris opens from the center and each word is born from it"
+  },
+  {
+   "id": "ed_corte_batida",
+   "cat": "transicao",
+   "role": "destaque",
+   "sub": [
+    "corte"
+   ],
+   "excl": true,
+   "words": [
+    2,
+    10
+   ],
+   "form": "centro_titulo",
+   "use": "Final sentence, verdict or closing of a passage on a cut — stamp with a slamming letterbox; the last line gets an underline"
+  },
+  {
+   "id": "ed_faixa_editorial",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    1,
+    7
+   ],
+   "form": "centro_frase",
+   "use": "Editorial band: title sentence with a signature"
+  },
+  {
+   "id": "ed_moldura_reveal",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    1,
+    10
+   ],
+   "form": "centro_frase",
+   "use": "Frame drawing itself around the secret sentence"
+  },
+  {
+   "id": "ed_brilho_palavra",
+   "cat": "enfase",
+   "role": "enfase",
+   "sub": null,
+   "words": [
+    3,
+    14
+   ],
+   "form": "palavra",
+   "use": "Glow on the spoken word inside the sentence"
+  },
+  {
+   "id": "ed_marker",
+   "cat": "enfase",
+   "role": "enfase",
+   "sub": null,
+   "words": [
+    3,
+    14
+   ],
+   "form": "marca",
+   "use": "Editorial (pen) marker under the passage"
+  },
+  {
+   "id": "hl_inline_focus",
+   "cat": "enfase",
+   "role": "enfase",
+   "sub": null,
+   "words": [
+    2,
+    12
+   ],
+   "form": "centro_frase",
+   "use": "Short sentence with one clearly more important word"
+  },
+  {
+   "id": "hl_word_cascade",
+   "cat": "enfase",
+   "role": "enfase",
+   "sub": null,
+   "words": [
+    3,
+    10
+   ],
+   "form": "cascata",
+   "use": "Rhythmic sentence where the word-by-word progression follows the speech"
+  },
+  {
+   "id": "hl_tracking_reveal",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    1,
+    7
+   ],
+   "form": "centro_titulo",
+   "use": "Term or short statement that deserves a sophisticated entrance"
+  },
+  {
+   "id": "hl_mask_slide",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    3,
+    12
+   ],
+   "form": "centro_titulo",
+   "use": "Two-line sentence with contrast — cause and consequence"
+  },
+  {
+   "id": "hl_bracket_focus",
+   "cat": "enfase",
+   "role": "enfase",
+   "sub": null,
+   "words": [
+    1,
+    6
+   ],
+   "form": "centro_frase",
+   "use": "Technical term or keyword asking for a light frame"
+  },
+  {
+   "id": "hl_underline_chase",
+   "cat": "atmosfera",
+   "role": "apoio",
+   "sub": null,
+   "words": [
+    2,
+    12
+   ],
+   "form": "centro_frase",
+   "use": "Subtle emphasis without interrupting the reading flow"
+  },
+  {
+   "id": "hl_gradient_marker",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    2,
+    9
+   ],
+   "form": "centro_frase",
+   "use": "Short passage that needs a visual mark"
+  },
+  {
+   "id": "hl_split_hierarchy",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    4,
+    14
+   ],
+   "form": "centro_titulo",
+   "use": "Before and after, expectation and reality, X but Y"
+  },
+  {
+   "id": "hl_condensed_impact",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": null,
+   "words": [
+    2,
+    8
+   ],
+   "form": "centro_titulo",
+   "use": "Turn, strong revelation, short high-impact statement"
+  },
+  {
+   "id": "hl_soft_whisper",
+   "cat": "atmosfera",
+   "role": "apoio",
+   "sub": null,
+   "words": [
+    2,
+    11
+   ],
+   "form": "centro_frase",
+   "use": "Reflection, silence, contained emotional sentence"
+  },
+  {
+   "id": "hl_quote_line",
+   "cat": "enfase",
+   "role": "info",
+   "sub": [
+    "citacao",
+    "biblia"
+   ],
+   "words": [
+    3,
+    24
+   ],
+   "form": "centro_frase",
+   "use": "Explicit quote or speech attributed to someone"
+  },
+  {
+   "id": "hl_blur_focus",
+   "cat": "enfase",
+   "role": "enfase",
+   "sub": null,
+   "words": [
+    2,
+    10
+   ],
+   "form": "centro_frase",
+   "use": "Discovery, understanding, soft revelation"
+  },
+  {
+   "id": "hl_scale_keyword",
+   "cat": "enfase",
+   "role": "enfase",
+   "sub": null,
+   "words": [
+    2,
+    10
+   ],
+   "form": "centro_frase",
+   "use": "One word of the sentence must be the center of attention"
+  },
+  {
+   "id": "hl_type_assemble",
+   "cat": "dados_provas",
+   "role": "info",
+   "sub": null,
+   "words": [
+    1,
+    6
+   ],
+   "form": "centro_frase",
+   "use": "Term, concept name, technology, short identification"
+  },
+  {
+   "id": "hl_count_label",
+   "cat": "dados_provas",
+   "role": "info",
+   "sub": [
+    "contagem"
+   ],
+   "excl": true,
+   "words": [
+    1,
+    5
+   ],
+   "form": "centro_titulo",
+   "use": "Explicit editorial count — 3 reasons, 5 signs, 7 mistakes"
+  },
+  {
+   "id": "hl_date_stamp",
+   "cat": "identificacao",
+   "role": "info",
+   "sub": [
+    "data",
+    "ano"
+   ],
+   "excl": true,
+   "words": [
+    1,
+    6
+   ],
+   "form": "centro_frase",
+   "use": "Explicit date that places the viewer in time"
+  },
+  {
+   "id": "hl_chapter_stamp",
+   "cat": "abertura",
+   "role": "secao",
+   "sub": [
+    "capitulo"
+   ],
+   "excl": true,
+   "words": [
+    1,
+    4
+   ],
+   "form": "centro_titulo",
+   "use": "Identified chapter, part or narrative section"
+  },
+  {
+   "id": "hl_article_stamp",
+   "cat": "dados_provas",
+   "role": "info",
+   "sub": [
+    "artigo"
+   ],
+   "excl": true,
+   "words": [
+    1,
+    6
+   ],
+   "form": "centro_frase",
+   "use": "Numbered article, rule or normative section"
+  },
+  {
+   "id": "hl_value_callout",
+   "cat": "dados_provas",
+   "role": "info",
+   "sub": [
+    "numero",
+    "pct",
+    "dinheiro"
+   ],
+   "words": [
+    1,
+    7
+   ],
+   "form": "centro_titulo",
+   "use": "Central quantitative figure — number, percentage or money"
+  },
+  {
+   "id": "hl_location_tag",
+   "cat": "identificacao",
+   "role": "info",
+   "sub": [
+    "local"
+   ],
+   "excl": true,
+   "words": [
+    1,
+    6
+   ],
+   "form": "centro_frase",
+   "use": "City, country or region relevant to the narrative"
+  },
+  {
+   "id": "v2_citacao",
+   "cat": "enfase",
+   "role": "apoio",
+   "sub": [
+    "citacao",
+    "biblia"
+   ],
+   "excl": true,
+   "words": [
+    4,
+    30
+   ],
+   "form": "citacao",
+   "use": "Attributed speech with source and date"
+  },
+  {
+   "id": "v2_ano",
+   "cat": "identificacao",
+   "role": "info",
+   "sub": [
+    "ano"
+   ],
+   "excl": true,
+   "words": [
+    1,
+    6
+   ],
+   "form": "centro_titulo",
+   "use": "Year that marks an era, absolute protagonist"
+  },
+  {
+   "id": "v2_odometro",
+   "cat": "dados_provas",
+   "role": "info",
+   "sub": [
+    "numero",
+    "dinheiro",
+    "pct"
+   ],
+   "words": [
+    1,
+    6
+   ],
+   "form": "centro_titulo",
+   "use": "Central amount rolling digit by digit like an instrument"
+  },
+  {
+   "id": "v2_pino_mapa",
+   "cat": "identificacao",
+   "role": "info",
+   "sub": [
+    "local"
+   ],
+   "excl": true,
+   "words": [
+    1,
+    8
+   ],
+   "form": "centro_titulo",
+   "use": "City/country/region that situates the narrative"
+  },
+  {
+   "id": "v2_pergunta",
+   "cat": "enfase",
+   "role": "destaque",
+   "sub": [
+    "pergunta"
+   ],
+   "excl": true,
+   "words": [
+    3,
+    12
+   ],
+   "form": "centro_frase",
+   "use": "Hook/doubt that must hang in the air"
+  },
+  {
+   "id": "v2_grade_cinema_baixo",
+   "cat": "identificacao",
+   "role": "info",
+   "sub": [
+    "local",
+    "nome"
+   ],
+   "words": [
+    1,
+    6
+   ],
+   "form": "terco",
+   "use": "Identify a place/person in the lower third without covering the scene"
+  },
+  {
+   "id": "v2_grade_cinema_foco",
+   "cat": "identificacao",
+   "role": "info",
+   "sub": [
+    "nome"
+   ],
+   "words": [
+    1,
+    5
+   ],
+   "form": "centro_titulo",
+   "use": "Person/object in focus at the center; name under the viewfinder"
+  },
+  {
+   "id": "v2_pct_anel",
+   "cat": "dados_provas",
+   "role": "info",
+   "sub": [
+    "pct"
+   ],
+   "words": [
+    1,
+    6
+   ],
+   "form": "centro_titulo",
+   "use": "Single percentage as a central instrument (ring)"
+  },
+  {
+   "id": "v2_pct_barra",
+   "cat": "dados_provas",
+   "role": "info",
+   "sub": [
+    "pct",
+    "numero"
+   ],
+   "words": [
+    1,
+    8
+   ],
+   "form": "terco",
+   "use": "Percentage/proportion as a bar in the lower third"
+  },
+  {
+   "id": "v2_pct_blocos",
+   "cat": "dados_provas",
+   "role": "info",
+   "sub": [
+    "pct",
+    "contagem"
+   ],
+   "words": [
+    1,
+    8
+   ],
+   "form": "centro_frase",
+   "use": "\"X out of ten\" — proportion in blocks"
+  },
+  {
+   "id": "v2_biblia_versiculo",
+   "cat": "enfase",
+   "role": "info",
+   "sub": [
+    "biblia"
+   ],
+   "excl": true,
+   "words": [
+    4,
+    60
+   ],
+   "form": "citacao",
+   "use": "Verse read in the speech, with the reference (Book chapter:verse) signing below"
+  },
+  {
+   "id": "v2_biblia_marcador",
+   "cat": "enfase",
+   "role": "info",
+   "sub": [
+    "biblia"
+   ],
+   "excl": true,
+   "words": [
+    1,
+    40
+   ],
+   "form": "selo_canto",
+   "use": "The speech CITES the reference (John 3:16, Romans 8:28) without reading the verse — discreet corner marker"
+  },
+  {
+   "id": "v2_biblia_pergaminho",
+   "cat": "enfase",
+   "role": "info",
+   "sub": [
+    "biblia"
+   ],
+   "excl": true,
+   "words": [
+    4,
+    50
+   ],
+   "form": "terco",
+   "use": "Verse read in a historical/solemn tone — paper, chapter drop cap"
+  },
+  {
+   "id": "v2_biblia_luz",
+   "cat": "enfase",
+   "role": "info",
+   "sub": [
+    "biblia"
+   ],
+   "excl": true,
+   "words": [
+    4,
+    40
+   ],
+   "form": "centro_frase",
+   "use": "Verse read with the words lighting up as they are spoken — devotional, light from above"
+  },
+  {
+   "id": "v2_biblia_capitulo",
+   "cat": "enfase",
+   "role": "info",
+   "sub": [
+    "biblia"
+   ],
+   "excl": true,
+   "words": [
+    1,
+    40
+   ],
+   "form": "centro_titulo",
+   "use": "Opening of a passage: book + chapter (+ verses) as a card"
+  }
+ ],
+ "manualOnlyHighlights": [
+  "v2_meia_tela",
+  "v2_maquina",
+  "v2_recorte_jornal",
+  "v2_caneta",
+  "v2_blueprint",
+  "v2_cascata",
+  "v2_cartela_epoca",
+  "v2_grade_cinema",
+  "v2_grade_tecnica",
+  "v2_grade_lateral",
+  "v2_grade_cinema_centro",
+  "v2_grade_cinema_dir",
+  "v2_grade_cinema_topo",
+  "v2_grade_lateral_dir",
+  "v2_grade_lateral_sobe",
+  "v2_palavras_escada",
+  "v2_palavra_foco"
+ ],
+ "templates": [
+  {
+   "id": "PREMIUM_9",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Single weighty scene that deserves a framed breath"
+  },
+  {
+   "id": "MOLDURA_02",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Contemplative scene with a central pool of light"
+  },
+  {
+   "id": "MOLDURA_03",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Informative scene in an architected setting (tonal plates)"
+  },
+  {
+   "id": "MOLDURA_04",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Dramatic/historical scene — the edges burn in amber"
+  },
+  {
+   "id": "MOLDURA_05",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Mystery/atmosphere scene — organic mist around"
+  },
+  {
+   "id": "MOLDURA_06",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Archive/memory scene — documentary paper around"
+  },
+  {
+   "id": "MOLDURA_07",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Analysis/investigation — technical desk with registration marks and rulers"
+  },
+  {
+   "id": "MOLDURA_08",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Energy turn with a diagonal architecture of light"
+  },
+  {
+   "id": "MOLDURA_09",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Contemplative pause with a horizon of light"
+  },
+  {
+   "id": "MOLDURA_10",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Energetic passage — the only frame with a live grid"
+  },
+  {
+   "id": "MOLDURA_11",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "The scene itself stays the protagonist, blurred around"
+  },
+  {
+   "id": "MOLDURA_12",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Desaturated continuity — the scene becomes memory around"
+  },
+  {
+   "id": "MULTITAKE_01",
+   "slots": 2,
+   "takes": 4,
+   "durS": 6,
+   "use": "Two related takes with a DOMINANT one (60/40) over plates"
+  },
+  {
+   "id": "MULTITAKE_02",
+   "slots": 2,
+   "takes": null,
+   "durS": 5,
+   "use": "Direct confrontation A×B — two sides of a clash"
+  },
+  {
+   "id": "MULTITAKE_03",
+   "slots": 2,
+   "takes": 4,
+   "durS": 6,
+   "use": "Temporal transformation in the SAME scene (before → after full screen)"
+  },
+  {
+   "id": "MULTITAKE_04",
+   "slots": 3,
+   "takes": 6,
+   "durS": 8,
+   "use": "One main take + two supports in the grid column (3 pieces of evidence)"
+  },
+  {
+   "id": "MULTITAKE_05",
+   "slots": 3,
+   "takes": 6,
+   "durS": 8,
+   "use": "Dramatic stack of 3 takes succeeding each other on the same stage"
+  },
+  {
+   "id": "MULTITAKE_06",
+   "slots": 2,
+   "takes": 4,
+   "durS": 7,
+   "use": "Calm pair side by side with a light hierarchy"
+  },
+  {
+   "id": "MULTITAKE_07",
+   "slots": 2,
+   "takes": 4,
+   "durS": 6,
+   "use": "Two takes on a diagonal (top-left/bottom-right) between glass planes"
+  },
+  {
+   "id": "MULTITAKE_08",
+   "slots": 3,
+   "takes": 6,
+   "durS": 8,
+   "use": "Trio with a central focus — the dominant take in the middle, smaller supports"
+  },
+  {
+   "id": "MULTITAKE_09",
+   "slots": 3,
+   "takes": 6,
+   "durS": 8,
+   "use": "Long sequence alternating left/right (up to 6 takes)"
+  },
+  {
+   "id": "MULTIGRADE_01",
+   "slots": 2,
+   "takes": 4,
+   "durS": 6,
+   "use": "Two takes in diagonal counterpoint over asymmetric blocks"
+  },
+  {
+   "id": "MULTIGRADE_02",
+   "slots": 2,
+   "takes": 4,
+   "durS": 6,
+   "use": "Pair with a reading on side glass — data + image"
+  },
+  {
+   "id": "MULTIGRADE_11",
+   "slots": 2,
+   "takes": 4,
+   "durS": 6,
+   "use": "Dominant + counterpoint between glass planes"
+  },
+  {
+   "id": "MULTIGRADE_12",
+   "slots": 2,
+   "takes": 4,
+   "durS": 6,
+   "use": "Aligned pair in a showcase (double frame) — elegant closing"
+  },
+  {
+   "id": "MULTIGRADE_03",
+   "slots": 2,
+   "takes": 4,
+   "durS": 5,
+   "use": "Two large takes in fast overlap"
+  },
+  {
+   "id": "MULTIGRADE_04",
+   "slots": 2,
+   "takes": 4,
+   "durS": 6,
+   "use": "Before/after in the same frame with a lateral reveal"
+  },
+  {
+   "id": "MULTIGRADE_05",
+   "slots": 3,
+   "takes": 6,
+   "durS": 8,
+   "use": "Staircase progression — steps that rise"
+  },
+  {
+   "id": "MULTIGRADE_06",
+   "slots": 3,
+   "takes": 6,
+   "durS": 8,
+   "use": "Trio under a glare with the central one dominant"
+  },
+  {
+   "id": "MULTIGRADE_07",
+   "slots": 3,
+   "takes": 6,
+   "durS": 8,
+   "use": "Diagonal cascade of three moments"
+  },
+  {
+   "id": "MULTIGRADE_08",
+   "slots": 3,
+   "takes": 6,
+   "durS": 8,
+   "use": "Discreet fan of three — dramatic climax"
+  },
+  {
+   "id": "MULTIGRADE_09",
+   "slots": 2,
+   "takes": 4,
+   "durS": 7,
+   "use": "Marked panel on the left with long speech + takes on the right"
+  },
+  {
+   "id": "MULTIGRADE_10",
+   "slots": 2,
+   "takes": 4,
+   "durS": 7,
+   "use": "Mirror of the Right Panel — takes on the left"
+  },
+  {
+   "id": "PREMIUM_10",
+   "slots": 2,
+   "takes": 4,
+   "durS": 8,
+   "use": "Two takes in depth (sharp front on the right, live back plane)"
+  },
+  {
+   "id": "FRENTEFUNDO_04",
+   "slots": 2,
+   "takes": 4,
+   "durS": 8,
+   "use": "Two takes in depth with the front on the left"
+  },
+  {
+   "id": "FRENTEFUNDO_02",
+   "slots": 2,
+   "takes": 4,
+   "durS": 8,
+   "use": "Vertical pair: front at the top revealing, back at the bottom"
+  },
+  {
+   "id": "FRENTEFUNDO_03",
+   "slots": 2,
+   "takes": 4,
+   "durS": 8,
+   "use": "Zoom pair: central front over the enlarged scene itself"
+  },
+  {
+   "id": "FRENTEFUNDO_05",
+   "slots": 2,
+   "takes": 4,
+   "durS": 8,
+   "use": "Depth pair with technical registration (fixed positions)"
+  },
+  {
+   "id": "FRENTEFUNDO_06",
+   "slots": 2,
+   "takes": 4,
+   "durS": 8,
+   "use": "Depth pair over the signature grid (fixed positions)"
+  },
+  {
+   "id": "FRENTEFUNDO_07",
+   "slots": 2,
+   "takes": 4,
+   "durS": 8,
+   "use": "Vertical pair between translucent planes (fixed positions)"
+  },
+  {
+   "id": "FRENTEFUNDO_08",
+   "slots": 2,
+   "takes": 4,
+   "durS": 8,
+   "use": "Zoom pair with burnt edges — dramatic mood"
+  },
+  {
+   "id": "VIDEO_2",
+   "slots": 2,
+   "takes": 4,
+   "durS": 8,
+   "use": "One take opens and becomes an asymmetric side-by-side PAIR"
+  },
+  {
+   "id": "RETRATO_01",
+   "slots": 1,
+   "takes": null,
+   "durS": 4.6,
+   "use": "Character/scene on the right with the speech highlighted on the left"
+  },
+  {
+   "id": "RETRATO_02",
+   "slots": 1,
+   "takes": null,
+   "durS": 4.6,
+   "use": "Character/scene on the left with the speech highlighted on the right"
+  },
+  {
+   "id": "RETRATO_03",
+   "slots": 1,
+   "takes": null,
+   "durS": 4.6,
+   "use": "Portrait with a technical frame (signature grid) — analysis, context"
+  },
+  {
+   "id": "RETRATO_04",
+   "slots": 1,
+   "takes": null,
+   "durS": 4.6,
+   "use": "Cut-out portrait with editorial blocks — energetic presentation"
+  },
+  {
+   "id": "tpl_cine_focus",
+   "slots": 1,
+   "takes": null,
+   "durS": 5.5,
+   "use": "Scene that carries the narrative alone and only needs a reading at the base"
+  },
+  {
+   "id": "tpl_editorial_left",
+   "slots": 1,
+   "takes": null,
+   "durS": 5,
+   "use": "Opening of a subject with title and label over the scene, reading on the left"
+  },
+  {
+   "id": "tpl_editorial_right",
+   "slots": 2,
+   "takes": 4,
+   "durS": 6,
+   "use": "The same editorial treatment when the subject of the image is on the left"
+  },
+  {
+   "id": "tpl_focus_window",
+   "slots": 1,
+   "takes": null,
+   "durS": 5,
+   "use": "Draw attention to a cut-out of the scene itself, with the rest pushed back"
+  },
+  {
+   "id": "tpl_film_frame",
+   "slots": 1,
+   "takes": null,
+   "durS": 5,
+   "use": "Photograph or painting that deserves to be presented as a piece"
+  },
+  {
+   "id": "tpl_archive_slide",
+   "slots": 2,
+   "takes": 4,
+   "durS": 6,
+   "use": "Period material, document, archive — when the past is the subject"
+  },
+  {
+   "id": "tpl_technical_scan",
+   "slots": 1,
+   "takes": null,
+   "durS": 5,
+   "use": "Analysis, investigation, technical reading of an image"
+  },
+  {
+   "id": "tpl_profile_scene",
+   "slots": 1,
+   "takes": null,
+   "durS": 5,
+   "use": "Present a person with an identification plate beside"
+  },
+  {
+   "id": "tpl_split_duplicate",
+   "slots": 1,
+   "takes": null,
+   "durS": 5.5,
+   "use": "Show two cut-outs of the SAME scene — detail and whole"
+  },
+  {
+   "id": "tpl_dual_take",
+   "slots": 4,
+   "takes": 4,
+   "durS": 8,
+   "use": "Two moments that comment on each other — before and after, cause and effect"
+  },
+  {
+   "id": "tpl_triple_sequence",
+   "slots": 3,
+   "takes": 6,
+   "durS": 8,
+   "use": "Three stages, three proofs, three moments in order"
+  },
+  {
+   "id": "tpl_mosaic_dynamic",
+   "slots": 4,
+   "takes": 4,
+   "durS": 8,
+   "use": "Panorama of four scenes that together form a portrait"
+  },
+  {
+   "id": "tpl_depth_layer",
+   "slots": 2,
+   "takes": 4,
+   "durS": 6,
+   "use": "Give depth to flat media, without cut-out"
+  },
+  {
+   "id": "tpl_epic_break",
+   "slots": 3,
+   "takes": 6,
+   "durS": 8,
+   "use": "Cinematic section break between blocks of the video"
+  },
+  {
+   "id": "ED_CITACAO",
+   "slots": 1,
+   "takes": null,
+   "durS": 5.5,
+   "use": "Literal quote with historical/emotional weight"
+  },
+  {
+   "id": "ED_LOWER_NOME",
+   "slots": 1,
+   "takes": null,
+   "durS": 4.5,
+   "use": "Present a person/character/expert"
+  },
+  {
+   "id": "ED_COMPARACAO",
+   "slots": 2,
+   "takes": 4,
+   "durS": 6,
+   "use": "Before/after, A versus B, direct contrast"
+  },
+  {
+   "id": "ED_TRIPLO_DOC",
+   "slots": 3,
+   "takes": 6,
+   "durS": 8,
+   "use": "Three declared stages/examples/aspects"
+  },
+  {
+   "id": "ED_FICHA_ARQUIVO",
+   "slots": 1,
+   "takes": null,
+   "durS": 6,
+   "use": "Historical context with source, archive data"
+  },
+  {
+   "id": "ED_PERFIL",
+   "slots": 1,
+   "takes": null,
+   "durS": 5,
+   "use": "Biography/witness: portrait + description"
+  },
+  {
+   "id": "ED_MOSAICO",
+   "slots": 4,
+   "takes": null,
+   "durS": 8,
+   "use": "Montage/visual summary of 4+ takes"
+  },
+  {
+   "id": "ED_ARTIGO",
+   "slots": 1,
+   "takes": null,
+   "durS": 5.5,
+   "use": "Article/law/rule explicitly cited"
+  },
+  {
+   "id": "C30_GATE_RESPIRA",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Cada take ocupa sozinho a área principal, inteiro, com a coreografia visual da família. Entra e sai no próprio intervalo; nenhum histórico permanece após o fim. Arranjo portal-amplo."
+  },
+  {
+   "id": "C30_FENDA_TRAVELLING",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Cada take ocupa sozinho a área principal, inteiro, com a coreografia visual da família. Entra e sai no próprio intervalo; nenhum histórico permanece após o fim. Arranjo trilho-texto-esquerdo."
+  },
+  {
+   "id": "C30_MARGEM_MUTANTE",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Cada take ocupa sozinho a área principal, inteiro, com a coreografia visual da família. Entra e sai no próprio intervalo; nenhum histórico permanece após o fim. Arranjo margem-texto-direito."
+  },
+  {
+   "id": "C30_IRIS_EXCENTRICA",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Cada take ocupa sozinho a área principal, inteiro, com a coreografia visual da família. Entra e sai no próprio intervalo; nenhum histórico permanece após o fim. Arranjo halo-central."
+  },
+  {
+   "id": "C30_LUZ_ARQUITETONICA",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Cada take ocupa sozinho a área principal, inteiro, com a coreografia visual da família. Entra e sai no próprio intervalo; nenhum histórico permanece após o fim. Arranjo galeria-legenda-alta."
+  },
+  {
+   "id": "C30_PAPEL_DESDOBRA",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Cada take ocupa sozinho a área principal, inteiro, com a coreografia visual da família. Entra e sai no próprio intervalo; nenhum histórico permanece após o fim. Arranjo papel-margem-direita."
+  },
+  {
+   "id": "C30_MATTE_ORGANICO",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Cada take ocupa sozinho a área principal, inteiro, com a coreografia visual da família. Entra e sai no próprio intervalo; nenhum histórico permanece após o fim. Arranjo organico-respiro-direito."
+  },
+  {
+   "id": "C30_PROJETOR",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Cada take ocupa sozinho a área principal, inteiro, com a coreografia visual da família. Entra e sai no próprio intervalo; nenhum histórico permanece após o fim. Arranjo exibicao-frontal."
+  },
+  {
+   "id": "C30_PANORAMA_INTEGRO",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Cada take ocupa sozinho a área principal, inteiro, com a coreografia visual da família. Entra e sai no próprio intervalo; nenhum histórico permanece após o fim. Arranjo panorama-maximo."
+  },
+  {
+   "id": "C30_LUPA_VINCULADA",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Cada take ocupa sozinho a área principal, inteiro, com a coreografia visual da família. Entra e sai no próprio intervalo; nenhum histórico permanece após o fim. Arranjo foco-texto-esquerdo."
+  },
+  {
+   "id": "C30_SEPTO_VIVO",
+   "slots": 2,
+   "takes": null,
+   "durS": 4,
+   "use": "A começa grande e inteiro; na chegada real de B, A se acomoda à esquerda e B percorre a faixa livre à direita. Os dois assentam lado a lado com tamanhos equivalentes, como uma esteira suave."
+  },
+  {
+   "id": "C30_LAMINA_OBLIQUA",
+   "slots": 2,
+   "takes": null,
+   "durS": 4,
+   "use": "Cada take ocupa sozinho a área principal, inteiro, com descida com giro discreto e retirada ascendente. Entra e sai no próprio intervalo; nenhum histórico permanece após o fim. Arranjo queda-alta-individual."
+  },
+  {
+   "id": "C30_FAIXAS_ENTRELACADAS",
+   "slots": 2,
+   "takes": null,
+   "durS": 4,
+   "use": "Take atual maior e integral; anteriores inteiros acima do take atual. Cada fonte aparece somente no próprio início. Arranjo prateleira-superior-esquerda."
+  },
+  {
+   "id": "C30_ARCOS_GEMEOS",
+   "slots": 2,
+   "takes": null,
+   "durS": 4,
+   "use": "Cada take ocupa sozinho a área principal, inteiro, com subida com giro controlado e recuo na saída. Entra e sai no próprio intervalo; nenhum histórico permanece após o fim. Arranjo portico-subida-individual."
+  },
+  {
+   "id": "C30_ORBITAS_TANGENTES",
+   "slots": 2,
+   "takes": null,
+   "durS": 4,
+   "use": "A começa grande e inteiro; na chegada real de B, A se acomoda à direita e B entra pela faixa livre à esquerda. Os dois assentam lado a lado com tamanhos equivalentes e fluxo invertido."
+  },
+  {
+   "id": "C30_DIALOGO_RESPONSIVO",
+   "slots": 2,
+   "takes": null,
+   "durS": 4,
+   "use": "Cada take ocupa sozinho a área principal, inteiro, com passagem horizontal alternando direita e esquerda. Entra e sai no próprio intervalo; nenhum histórico permanece após o fim. Arranjo contracampo-passagem-direita."
+  },
+  {
+   "id": "C30_VARREDURA_REGISTRADA",
+   "slots": 2,
+   "takes": null,
+   "durS": 4,
+   "use": "Cada take ocupa sozinho a área principal, inteiro, com travessia horizontal com aceleração e desaceleração progressivas. Entra e sai no próprio intervalo; nenhum histórico permanece após o fim. Arranjo comparacao-passagem-esquerda."
+  },
+  {
+   "id": "C30_DOBRA_CENTRAL",
+   "slots": 2,
+   "takes": null,
+   "durS": 4,
+   "use": "Take atual maior e integral; anteriores inteiros acima do take atual. Cada fonte aparece somente no próprio início. Arranjo album-prateleira-alta."
+  },
+  {
+   "id": "C30_CONTEXTO_E_MACRO",
+   "slots": 2,
+   "takes": null,
+   "durS": 4,
+   "use": "Cada take ocupa sozinho a área principal, inteiro, com expansão suave de profundidade e recuo ao encerrar. Entra e sai no próprio intervalo; nenhum histórico permanece após o fim. Arranjo contexto-recuo-individual."
+  },
+  {
+   "id": "C30_DIPTICO_INTEGRO",
+   "slots": 2,
+   "takes": null,
+   "durS": 4,
+   "use": "Take atual maior e integral; anteriores inteiros na lateral direita. Cada fonte aparece somente no próprio início. Arranjo diptico-apoio-direito."
+  },
+  {
+   "id": "C30_JANELA_DESACOPLA",
+   "slots": 2,
+   "takes": null,
+   "durS": 4,
+   "use": "Cada take ocupa sozinho a área principal, inteiro, com expansão com subida e retirada ascendente. Entra e sai no próprio intervalo; nenhum histórico permanece após o fim. Arranjo quadro-expansao-individual."
+  },
+  {
+   "id": "C30_GALERIA_PERSPECTIVA",
+   "slots": 2,
+   "takes": null,
+   "durS": 4,
+   "use": "Take atual maior e integral; anteriores inteiros na lateral esquerda. Cada fonte aparece somente no próprio início. Arranjo galeria-superior-esquerda."
+  },
+  {
+   "id": "C30_TRIPTICO_DOMINANCIA",
+   "slots": 3,
+   "takes": null,
+   "durS": 4,
+   "use": "Take atual maior e integral; anteriores inteiros acima do take atual. Cada fonte aparece somente no próprio início. Arranjo dominancia-trilho-superior."
+  },
+  {
+   "id": "C30_PERCURSO_L",
+   "slots": 3,
+   "takes": null,
+   "durS": 4,
+   "use": "Take atual maior e integral; anteriores inteiros em L, à esquerda e abaixo. Cada fonte aparece somente no próprio início. Arranjo percurso-l-inferior-esquerdo."
+  },
+  {
+   "id": "C30_ATLAS_HEXAGONAL",
+   "slots": 3,
+   "takes": null,
+   "durS": 4,
+   "use": "Cada take ocupa sozinho a área principal, inteiro, com percurso curvo com giro discreto e recuo. Entra e sai no próprio intervalo; nenhum histórico permanece após o fim. Arranjo atlas-orbita-individual."
+  },
+  {
+   "id": "C30_OCUSAO_CONTINUA",
+   "slots": 3,
+   "takes": null,
+   "durS": 4,
+   "use": "Cada take ocupa sozinho a área principal, inteiro, com aproximação integral suave e afastamento ao fim. Entra e sai no próprio intervalo; nenhum histórico permanece após o fim. Arranjo planos-profundidade-individual."
+  },
+  {
+   "id": "C30_ESTEIRA_FOTOGRAMAS",
+   "slots": 3,
+   "takes": null,
+   "durS": 4,
+   "use": "Arquivo progressivo: primeiro um quadro grande, depois dois lado a lado; o terceiro começa no espaço inferior livre e sobe suavemente para sua coluna no tempo real, com destaque transitório enquanto os anteriores se acomodam. O conjunto assenta em três colunas proporcionais, sem miniaturas subordinadas."
+  },
+  {
+   "id": "C30_CONSTELACAO",
+   "slots": 3,
+   "takes": null,
+   "durS": 4,
+   "use": "Cada take ocupa sozinho a área principal, inteiro, com passagem em arco com sentidos alternados. Entra e sai no próprio intervalo; nenhum histórico permanece após o fim. Arranjo conectores-curva-individual."
+  },
+  {
+   "id": "C30_MESA_LUZ",
+   "slots": 3,
+   "takes": null,
+   "durS": 4,
+   "use": "Take atual maior e integral; anteriores inteiros abaixo do take atual. Cada fonte aparece somente no próprio início. Arranjo mesa-memorias-inferiores."
+  },
+  {
+   "id": "C30_CADENCIA_TRES_ATOS",
+   "slots": 3,
+   "takes": null,
+   "durS": 4,
+   "use": "Cada take ocupa sozinho a área principal, inteiro, com elevação e descida alternadas com saída ascendente. Entra e sai no próprio intervalo; nenhum histórico permanece após o fim. Arranjo cadencia-elevacao-individual."
+  },
+  {
+   "id": "C50_GRID_CATAVENTO",
+   "slots": 4,
+   "takes": null,
+   "durS": 4,
+   "use": "Take atual maior e integral; anteriores inteiros no contorno superior e esquerdo. Cada fonte aparece somente no próprio início. Arranjo catavento-canto-noroeste."
+  },
+  {
+   "id": "C50_GRID_JUNTAS",
+   "slots": 4,
+   "takes": null,
+   "durS": 4,
+   "use": "Dossiê progressivo: A começa grande; B forma uma dupla equilibrada; C abre a segunda linha e D completa o painel 2×2. Os quatro quadros têm pesos próximos. Só entram as fontes cujo início real já chegou."
+  },
+  {
+   "id": "C50_GRID_CANAIS",
+   "slots": 4,
+   "takes": null,
+   "durS": 4,
+   "use": "Cada take ocupa sozinho a área principal, inteiro, com passagem lateral com giro e sentidos alternados. Entra e sai no próprio intervalo; nenhum histórico permanece após o fim. Arranjo canais-varredura-individual."
+  },
+  {
+   "id": "C50_GRID_ROSACEA",
+   "slots": 4,
+   "takes": null,
+   "durS": 4,
+   "use": "Take atual maior e integral; anteriores inteiros na lateral direita. Cada fonte aparece somente no próprio início. Arranjo rosacea-coluna-direita."
+  },
+  {
+   "id": "C50_GRID_SERRA",
+   "slots": 3,
+   "takes": null,
+   "durS": 4,
+   "use": "Cada take ocupa sozinho a área principal, inteiro, com subida diagonal com giro controlado. Entra e sai no próprio intervalo; nenhum histórico permanece após o fim. Arranjo degraus-diagonal-individual."
+  },
+  {
+   "id": "C50_GRID_PILAR_OCULOS",
+   "slots": 3,
+   "takes": null,
+   "durS": 4,
+   "use": "Take atual maior e integral; anteriores inteiros em apoios nos dois lados. Cada fonte aparece somente no próprio início. Arranjo centro-apoios-laterais."
+  },
+  {
+   "id": "C50_GRID_DIAGONAIS",
+   "slots": 4,
+   "takes": null,
+   "durS": 4,
+   "use": "Take atual maior e integral; anteriores inteiros no contorno inferior e direito. Cada fonte aparece somente no próprio início. Arranjo cruz-canto-sudeste."
+  },
+  {
+   "id": "C50_GRID_TRAMA_FLUIDA",
+   "slots": 3,
+   "takes": null,
+   "durS": 4,
+   "use": "Take atual maior e integral; anteriores inteiros nos cantos nordeste e sudoeste. Cada fonte aparece somente no próprio início. Arranjo contrafluxo-diagonal-nordeste-sudoeste."
+  },
+  {
+   "id": "C50_DUPLA_CHEVRONS",
+   "slots": 2,
+   "takes": null,
+   "durS": 4,
+   "use": "Cada take ocupa sozinho a área principal, inteiro, com entrada em arco com giro controlado e recuo. Entra e sai no próprio intervalo; nenhum histórico permanece após o fim. Arranjo encontro-giro-individual."
+  },
+  {
+   "id": "C50_DUPLA_FAIXA_PASSANTE",
+   "slots": 2,
+   "takes": null,
+   "durS": 4,
+   "use": "A começa grande; B percorre uma diagonal suave com giro discreto na faixa livre enquanto A se acomoda à esquerda. Os dois assentam horizontais lado a lado, com tamanhos equivalentes."
+  },
+  {
+   "id": "C50_DUPLA_CAPSULAS",
+   "slots": 2,
+   "takes": null,
+   "durS": 4,
+   "use": "Take atual maior e integral; anteriores inteiros na lateral direita. Cada fonte aparece somente no próprio início. Arranjo capsula-inferior-direita."
+  },
+  {
+   "id": "C50_DUPLA_BRUMA",
+   "slots": 2,
+   "takes": null,
+   "durS": 4,
+   "use": "Cada take ocupa sozinho a área principal, inteiro, com fade suave com halo externo em movimento. Entra e sai no próprio intervalo; nenhum histórico permanece após o fim. Arranjo bruma-halo-individual."
+  },
+  {
+   "id": "C50_DUPLA_ENCAIXES",
+   "slots": 2,
+   "takes": null,
+   "durS": 4,
+   "use": "A começa grande; B desliza suavemente na área livre sem girar enquanto A se acomoda à esquerda. O encaixe termina com dois quadros inteiros lado a lado e de tamanhos equivalentes."
+  },
+  {
+   "id": "C50_DUPLA_SOBREIMPRESSAO",
+   "slots": 2,
+   "takes": null,
+   "durS": 4,
+   "use": "Take atual maior e integral; anteriores inteiros abaixo do take atual. Cada fonte aparece somente no próprio início. Arranjo duas-luzes-memoria-inferior."
+  },
+  {
+   "id": "C50_SOCIAL_BALAO",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Cada take ocupa sozinho a área principal, inteiro, com a coreografia visual da família. Entra e sai no próprio intervalo; nenhum histórico permanece após o fim. Arranjo comentario-amplo-alto."
+  },
+  {
+   "id": "C50_SOCIAL_BILHETE",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Cada take ocupa sozinho a área principal, inteiro, com a coreografia visual da família. Entra e sai no próprio intervalo; nenhum histórico permanece após o fim. Arranjo bilhete-margem-direita."
+  },
+  {
+   "id": "C50_CINTA_CURVA",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Cada take ocupa sozinho a área principal, inteiro, com a coreografia visual da família. Entra e sai no próprio intervalo; nenhum histórico permanece após o fim. Arranjo cinta-base-com-texto-alto."
+  },
+  {
+   "id": "C50_JANELA_DEGRAUS",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Cada take ocupa sozinho a área principal, inteiro, com a coreografia visual da família. Entra e sai no próprio intervalo; nenhum histórico permanece após o fim. Arranjo degraus-respiro-esquerdo."
+  },
+  {
+   "id": "C50_ANEL_IMAGEM",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Cada take ocupa sozinho a área principal, inteiro, com a coreografia visual da família. Entra e sai no próprio intervalo; nenhum histórico permanece após o fim. Arranjo anel-central-aberto."
+  },
+  {
+   "id": "C50_VENEZIANAS_IMAGEM",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Cada take ocupa sozinho a área principal, inteiro, com a coreografia visual da família. Entra e sai no próprio intervalo; nenhum histórico permanece após o fim. Arranjo venezianas-respiro-direito."
+  },
+  {
+   "id": "C50_SOLO_51_PAPER_DROP",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Single-source archive presentation with complete uncropped media and paper-drop motion."
+  },
+  {
+   "id": "C50_SOLO_52_FOLDER_TRACK",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Single-source folder presentation with complete uncropped media and folder-track motion."
+  },
+  {
+   "id": "C50_SOLO_53_CONTACT_PRINT",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Single-source contact presentation with complete uncropped media and contact-print motion."
+  },
+  {
+   "id": "C50_SOLO_54_ESSAY_SPREAD",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Single-source essay presentation with complete uncropped media and essay-spread motion."
+  },
+  {
+   "id": "C50_SOLO_55_RAIL_LAUNCH",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Single-source runners presentation with complete uncropped media and rail-launch motion."
+  },
+  {
+   "id": "C50_SOLO_56_HORIZON_DOLLY",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Single-source depth presentation with complete uncropped media and horizon-dolly motion."
+  },
+  {
+   "id": "C50_SOLO_57_ISOMETRIC_ARC",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Single-source coordinates presentation with complete uncropped media and isometric-arc motion."
+  },
+  {
+   "id": "C50_SOLO_58_POLAR_ORBIT",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Single-source polar presentation with complete uncropped media and polar-orbit motion."
+  },
+  {
+   "id": "C50_SOLO_59_HEADLINE_TRACK",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Single-source news presentation with complete uncropped media and headline-track motion."
+  },
+  {
+   "id": "C50_SOLO_60_COLUMN_RISE",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Single-source column presentation with complete uncropped media and column-rise motion."
+  },
+  {
+   "id": "C50_SOLO_61_MAGAZINE_PIVOT",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Single-source magazine presentation with complete uncropped media and magazine-pivot motion."
+  },
+  {
+   "id": "C50_SOLO_62_POSTER_ARRIVE",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Single-source poster presentation with complete uncropped media and poster-arrive motion."
+  },
+  {
+   "id": "C50_SOLO_63_LIGHT_TRAVEL",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Single-source light-track presentation with complete uncropped media and light-travel motion."
+  },
+  {
+   "id": "C50_SOLO_64_FOCUS_DISSOLVE",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Single-source atmosphere presentation with complete uncropped media and focus-dissolve motion."
+  },
+  {
+   "id": "C50_SOLO_65_SUSPENDED_RISE",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Single-source suspended presentation with complete uncropped media and suspended-rise motion."
+  },
+  {
+   "id": "C50_SOLO_66_RIMLIGHT_DROP",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Single-source rimlight presentation with complete uncropped media and rimlight-drop motion."
+  },
+  {
+   "id": "C50_SOLO_67_MAP_TRAVEL",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Single-source map presentation with complete uncropped media and map-travel motion."
+  },
+  {
+   "id": "C50_SOLO_68_ROUTE_ARC",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Single-source route presentation with complete uncropped media and route-arc motion."
+  },
+  {
+   "id": "C50_SOLO_69_RESEARCH_LAND",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Single-source research presentation with complete uncropped media and research-land motion."
+  },
+  {
+   "id": "C50_SOLO_70_HORIZON_LIFT",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Single-source horizon presentation with complete uncropped media and horizon-lift motion."
+  },
+  {
+   "id": "C50_SOLO_71_HALFTONE_BLOOM",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Single-source halftone presentation with complete uncropped media and halftone-bloom motion."
+  },
+  {
+   "id": "C50_SOLO_72_PARALLEL_PASS",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Single-source parallel presentation with complete uncropped media and parallel-pass motion."
+  },
+  {
+   "id": "C50_SOLO_73_VERTEX_CURVE",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Single-source vertex presentation with complete uncropped media and vertex-curve motion."
+  },
+  {
+   "id": "C50_SOLO_74_QUIET_REVEAL",
+   "slots": 1,
+   "takes": null,
+   "durS": 4,
+   "use": "Single-source quiet presentation with complete uncropped media and quiet-reveal motion."
+  },
+  {
+   "id": "tpl_avatar_circulo",
+   "slots": 2,
+   "takes": null,
+   "durS": 4,
+   "use": "Avatar in a compact circular frame over the scene; use when the speaker should remain visible without taking the whole screen"
+  },
+  {
+   "id": "tpl_avatar_janela",
+   "slots": 2,
+   "takes": null,
+   "durS": 4,
+   "use": "Avatar in a soft window beside the main take; use when the speaker and scene need equal reading space"
+  },
+  {
+   "id": "tpl_avatar_duplo",
+   "slots": 2,
+   "takes": null,
+   "durS": 4,
+   "use": "Avatar and main take side by side; use for direct explanation over supporting footage"
+  },
+  {
+   "id": "tpl_avatar_molduras",
+   "slots": 2,
+   "takes": null,
+   "durS": 4,
+   "use": "Editorial Avatar frame with restrained borders; use for a deliberate presenter or testimony beat"
+  },
+  {
+   "id": "tpl_avatar_grade_estudio",
+   "slots": 2,
+   "takes": null,
+   "durS": 4,
+   "use": "Balanced 16:9 frames on a restrained technical grid for a continuous explanation"
+  },
+  {
+   "id": "tpl_avatar_grade_papel",
+   "slots": 2,
+   "takes": null,
+   "durS": 4,
+   "use": "Light graph paper, dominant supporting footage and a smaller presenter for research or documentary passages"
+  },
+  {
+   "id": "tpl_avatar_grade_horizonte",
+   "slots": 2,
+   "takes": null,
+   "durS": 4,
+   "use": "Wide supporting footage with a smaller presenter and perspective grid for landscapes or demonstrations"
+  },
+  {
+   "id": "tpl_avatar_grade_diagonal",
+   "slots": 2,
+   "takes": null,
+   "durS": 4,
+   "use": "Offset widescreen panels for a clear visual counterpoint; keep the subject readable"
+  },
+  {
+   "id": "tpl_avatar_grade_orbita",
+   "slots": 2,
+   "takes": null,
+   "durS": 4,
+   "use": "Subtle radial technical grid and two widescreen frames for systems and contextual explanations"
+  }
+ ],
+ "manualOnlyTemplates": [
+  "INTRO_DOC_0",
+  "TEXT_MATCH_CUT_0",
+  "WHOOSH_STUDIO_0",
+  "SHUTTER_0",
+  "SHUTTER_1_LAMINAS",
+  "SHUTTER_2_FILME",
+  "SHUTTER_3_DOSSIE",
+  "SHUTTER_4_FOCO",
+  "SHUTTER_5_FINALE",
+  "SHUTTER_6_DESLIZE",
+  "SHUTTER_7_REFOCO",
+  "SHUTTER_8_PULSO",
+  "REF_FLASH_PUSH",
+  "REF_FILM_SLIDE",
+  "REF_CAMERA_FOCUS",
+  "REF_FILM_ROLL_IN"
+ ],
+ "catalogs": {
+  "transitions": [
+   "none",
+   "fade",
+   "slide_left",
+   "slide_right",
+   "slide_up",
+   "slide_down",
+   "wipe_left",
+   "wipe_right",
+   "wipe_up",
+   "wipe_down",
+   "wipe_diag_tlbr",
+   "wipe_diag_trbl",
+   "flip",
+   "clock_wipe",
+   "iris",
+   "dissolve",
+   "film_burn",
+   "film_roll",
+   "linear_blur",
+   "zoom_in_out",
+   "book_flip",
+   "camera_shutter",
+   "camera_flash",
+   "camera_focus",
+   "film_fire_sweep",
+   "film_burn_aperture",
+   "gl_fade_escuro",
+   "gl_fade_claro",
+   "gl_fade_suave",
+   "gl_fade_grao",
+   "gl_fade_brilho",
+   "cb_sobe",
+   "cb_desce",
+   "cb_esquerda",
+   "cb_direita",
+   "cb_zoom",
+   "cb_foco",
+   "cb_respiro",
+   "cb_mergulho",
+   "gl_woosh",
+   "gl_brilho",
+   "gl_brilho2",
+   "ft_prisma",
+   "ft_fogo",
+   "ft_filmburn2",
+   "ft_filmburn4",
+   "ft_filmburn5",
+   "ft_filmburn6",
+   "ft_filmburn7",
+   "ft_filmburn9",
+   "ft_arcoiris",
+   "ft_dourado",
+   "ft_poeira",
+   "ft_pk_leak1",
+   "ft_pk_leak2",
+   "ft_pk_leak3",
+   "ft_pk_leak4",
+   "ft_pk_leak5",
+   "ft_pk_leak6",
+   "ft_pk_burn1",
+   "ft_pk_burn2",
+   "ft_pk_burn3",
+   "ft_pk_burn4",
+   "ft_pk_glitch",
+   "ft_pk_film",
+   "ft_pk2_leak1",
+   "ft_pk2_leak2",
+   "ft_pk2_leak3",
+   "ft_pk2_leak4",
+   "ft_pk2_leak5",
+   "ft_pk2_leak6",
+   "ft_pk2_leak7",
+   "ft_pk2_burn1",
+   "ft_pk2_burn2",
+   "ft_pk2_burn3",
+   "ft_pk2_riscado",
+   "ft_pk2_suave",
+   "ft_pk2_glitch",
+   "ft_splash_1",
+   "ft_splash_2",
+   "ft_splash_3",
+   "ft_splash_4",
+   "ft_splash_5",
+   "gl_arcoiris",
+   "gl_kaleido",
+   "gl_pull_up",
+   "gl_pull_down",
+   "gl_pull_left",
+   "gl_pull_right",
+   "gl_mirror_v",
+   "gl_flash",
+   "gl_punch",
+   "gl_spin",
+   "gl_circle",
+   "gl_crosswarp",
+   "gl_radial",
+   "gl_doorway",
+   "gl_zoom_cross",
+   "gl_ripple",
+   "gl_pixel_cross",
+   "gl_dreamy",
+   "gl_windowslice",
+   "gl_pinwheel",
+   "gl_squeeze",
+   "gl_glitch",
+   "gl_oss_advancedmosaic",
+   "gl_oss_blockdissolve",
+   "gl_oss_bounce",
+   "gl_oss_bowtiehorizontal",
+   "gl_oss_bowtievertical",
+   "gl_oss_bowtiewithparameter",
+   "gl_oss_box",
+   "gl_oss_butterflywavescrawler",
+   "gl_oss_circlecrop",
+   "gl_oss_colourdistance",
+   "gl_oss_crazyparametricfun",
+   "gl_oss_defocusblur",
+   "gl_oss_directionalscaled",
+   "gl_oss_doomscreentransition",
+   "gl_oss_dreamyzoom",
+   "gl_oss_dropzoneflicker",
+   "gl_oss_edgetransition",
+   "gl_oss_fold",
+   "gl_oss_glitchdisplace",
+   "gl_oss_glitchmemories",
+   "gl_oss_gridflip",
+   "gl_oss_hsvfade",
+   "gl_oss_horizontalclose",
+   "gl_oss_horizontalopen",
+   "gl_oss_leftright",
+   "gl_oss_mosaic",
+   "gl_oss_overexposure",
+   "gl_oss_polkadotscurtain",
+   "gl_oss_puzzleright",
+   "gl_oss_radial",
+   "gl_oss_rectangle",
+   "gl_oss_rectanglecrop",
+   "gl_oss_revolveleft",
+   "gl_oss_rolls",
+   "gl_oss_rotatescalevanish",
+   "gl_oss_simplezoom",
+   "gl_oss_simplezoomout",
+   "gl_oss_slides",
+   "gl_oss_starwipe",
+   "gl_oss_staticfade",
+   "gl_oss_stripdatamoshglitch",
+   "gl_oss_swirl",
+   "gl_oss_tvstatic",
+   "gl_oss_tileswave",
+   "gl_oss_topbottom",
+   "gl_oss_verticalclose",
+   "gl_oss_verticalopen",
+   "gl_oss_waterdrop",
+   "gl_oss_zoomincircles",
+   "gl_oss_zoomleftwipe",
+   "gl_oss_zoomrigthwipe",
+   "gl_oss_burn0",
+   "gl_oss_cannabisleaf",
+   "gl_oss_chessboard",
+   "gl_oss_colorphase",
+   "gl_oss_coordfromin",
+   "gl_oss_crosshatch",
+   "gl_oss_cube",
+   "gl_oss_directionaleasing",
+   "gl_oss_directionalwarp",
+   "gl_oss_dissolve",
+   "gl_oss_fadecolor",
+   "gl_oss_fadegrayscale",
+   "gl_oss_flyeye",
+   "gl_oss_fragment",
+   "gl_oss_heart",
+   "gl_oss_hexagonalize",
+   "gl_oss_luminancemelt",
+   "gl_oss_morph",
+   "gl_oss_mosaictransition",
+   "gl_oss_multiplyblend",
+   "gl_oss_oldtvlostsignal",
+   "gl_oss_parametricglitch",
+   "gl_oss_perlin",
+   "gl_oss_polarfunction",
+   "gl_oss_powerkaleido",
+   "gl_oss_randomnoisex",
+   "gl_oss_randomsquares",
+   "gl_oss_rotatetransition",
+   "gl_oss_rotatescalefade",
+   "gl_oss_scalein",
+   "gl_oss_splitslideinhorizontal",
+   "gl_oss_splitslideinouthorizontal",
+   "gl_oss_splitslideinoutvertical",
+   "gl_oss_splitslideinvertical",
+   "gl_oss_splitslideouthorizontal",
+   "gl_oss_splitslideoutvertical",
+   "gl_oss_squeeze",
+   "gl_oss_staticwipe",
+   "gl_oss_swap",
+   "gl_oss_tangentmotionblur",
+   "gl_oss_undulatingburnout",
+   "gl_oss_wind",
+   "gl_oss_windowblinds",
+   "gl_oss_xaxistranslation",
+   "gl_oss_zoominout"
+  ],
+  "effects": [
+   "none",
+   "zoom_in",
+   "zoom_out",
+   "zoom_rapido",
+   "pan_esq",
+   "pan_dir",
+   "pan_cima",
+   "pan_baixo",
+   "zoom_pan_esq",
+   "zoom_pan_dir",
+   "zoom_pan_cima",
+   "zoom_giro",
+   "zoom_respiro",
+   "fv_galaxy",
+   "ov_leak",
+   "ov_vinheta_pulso",
+   "ov_scanlines",
+   "ov_sujeira",
+   "ov_flash_borda",
+   "ov_poeira",
+   "ov_neblina",
+   "ov_bokeh_suave",
+   "ov_facho_suave",
+   "ov_fumaca_rasteira",
+   "ov_veu_dourado",
+   "ov_particulas_lentas",
+   "flicker"
+  ],
+  "entrances": [
+   "none",
+   "fade",
+   "zoom_in",
+   "zoom_out",
+   "slide_up",
+   "slide_down",
+   "slide_left",
+   "slide_right",
+   "pop",
+   "blur_in",
+   "focus",
+   "flash",
+   "spin",
+   "drop",
+   "shake",
+   "vibration",
+   "wobble",
+   "swing",
+   "stretch",
+   "flip_3d",
+   "tv_on",
+   "zoom_soft",
+   "punch_in",
+   "shockwave",
+   "slingshot",
+   "spring_in",
+   "ghost_trail",
+   "soft_land",
+   "smoke",
+   "assenta",
+   "desliza_suave",
+   "ergue_suave",
+   "revela_esq",
+   "revela_cima",
+   "revela_diag",
+   "dissolve_foco",
+   "escala_entra"
+  ],
+  "filters": [
+   "original",
+   "bw",
+   "noir",
+   "soft",
+   "fade",
+   "sepia",
+   "vintage",
+   "vhs",
+   "old_film",
+   "cinematic",
+   "teal_orange",
+   "blockbuster",
+   "thriller",
+   "documentary",
+   "warm",
+   "cold",
+   "dramatic",
+   "dreamy",
+   "moonlight",
+   "sunset",
+   "golden_hour",
+   "vivid",
+   "punch",
+   "neon",
+   "cyberpunk",
+   "pastel",
+   "matte",
+   "bleach",
+   "emerald",
+   "crimson",
+   "midnight",
+   "sunbleach",
+   "tape",
+   "noir_soft",
+   "clarendon",
+   "gingham",
+   "moon",
+   "lark",
+   "reyes",
+   "juno",
+   "slumber",
+   "crema",
+   "ludwig",
+   "aden",
+   "perpetua",
+   "amaro",
+   "mayfair",
+   "rise",
+   "hudson",
+   "valencia",
+   "xpro2",
+   "sierra",
+   "willow",
+   "lofi",
+   "inkwell",
+   "hefe",
+   "nashville",
+   "stinson",
+   "earlybird",
+   "brannan",
+   "toaster",
+   "walden",
+   "f1977",
+   "kelvin",
+   "noite_gelada",
+   "verao_brilha",
+   "azul_ilha",
+   "ceu_coral",
+   "pele_avelud",
+   "preto_frio",
+   "violeta_suave",
+   "negativo",
+   "laranja_fresca",
+   "azul_isolado"
+  ]
+ },
+ "presets": {
+  "system": [
+   {
+    "id": "sys_tudo",
+    "nome": "Padrão do sistema",
+    "universo": "sistema",
+    "ritmo": "equilibrado"
+   },
+   {
+    "id": "sys_doc_classico",
+    "nome": "Documentário clássico",
+    "universo": "predef",
+    "ritmo": "equilibrado"
+   },
+   {
+    "id": "sys_cinema",
+    "nome": "Cinema premium",
+    "universo": "predef",
+    "ritmo": "equilibrado"
+   },
+   {
+    "id": "sys_dinamico",
+    "nome": "Cortes dinâmicos",
+    "universo": "predef",
+    "ritmo": "equilibrado"
+   }
+  ],
+  "universo": [
+   "predef",
+   "sistema"
+  ],
+  "colourModes": [
+   "predef",
+   "projeto",
+   "auto"
+  ]
+ },
+ "intake": {
+  "highlights": {
+   "blocoId": "caption id of the speech block (required)",
+   "estilo": "highlight style id (required, autoEligible)",
+   "texto": "optional authored text (default: the block speech). If it quotes the speech, its first 2-3 words are located in the word JSON and anchor the highlight; if it is a summary, palavra or palavraIdx is REQUIRED on spans longer than 2.5 s",
+   "campos": "optional field values by field id (see highlights[id].texto.campos)",
+   "palavra": "word of the block that anchors the highlight (the item appears at most preRoll before it is spoken) — required for authored/summary text",
+   "palavraIdx": "optional 0-based index of the spoken word in the block",
+   "pos": "alto | centro | baixo (optional)",
+   "tam": "g | m | p (optional)"
+  },
+  "rejectionReasons": [
+   "bloco de fala inexistente",
+   "bloco já recebeu destaque nesta proposta",
+   "estilo desconhecido",
+   "estilo só-manual (fora do sorteio e da IA)",
+   "estilo fora da predefinição ativa",
+   "estilo exclusivo de <subtipos> sem esse sinal no bloco",
+   "subtipo proibido pelo estilo (subNao)",
+   "texto vazio",
+   "texto fora do alcance do estilo (min–max palavras)",
+   "texto autoral sem âncora na fala: use palavras ditas no trecho ou informe palavra/palavraIdx",
+   "palavra \"<x>\" não é dita neste bloco",
+   "não cabe no tempo: N batidas em Ts (máx ≈ M) — encurte para ≤M palavras",
+   "digitação fora de 6–30 cps",
+   "colisão de tela"
+  ]
+ }
+}

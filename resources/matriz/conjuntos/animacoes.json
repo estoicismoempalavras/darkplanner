@@ -1,0 +1,156 @@
+{
+  "gerado": true,
+  "descricao": "Conjuntos de entradas/saídas por FAMÍLIA (perfis-anims.js) e os PARES HARMÔNICOS: a saída de uma cena combina com a entrada da próxima. Alterne pares dentro do conjunto; nunca anime a junção que já tem transição.",
+  "conjuntos": [
+    {
+      "id": "suave",
+      "nome": "Suave (respiro)",
+      "intensidade": 1,
+      "itens": [
+        "fade",
+        "zoom_soft",
+        "focus",
+        "blur_in",
+        "soft_land",
+        "ghost_trail",
+        "smoke"
+      ],
+      "pares": [
+        {
+          "saida": "fade",
+          "entrada": "fade"
+        },
+        {
+          "saida": "blur_in",
+          "entrada": "focus"
+        },
+        {
+          "saida": "zoom_soft",
+          "entrada": "soft_land"
+        },
+        {
+          "saida": "smoke",
+          "entrada": "ghost_trail"
+        }
+      ]
+    },
+    {
+      "id": "deslize",
+      "nome": "Deslizes (direção contínua)",
+      "intensidade": 2,
+      "itens": [
+        "slide_up",
+        "slide_down",
+        "slide_left",
+        "slide_right",
+        "drop",
+        "spring_in",
+        "slingshot",
+        "stretch"
+      ],
+      "pares": [
+        {
+          "saida": "slide_left",
+          "entrada": "slide_left"
+        },
+        {
+          "saida": "slide_right",
+          "entrada": "slide_right"
+        },
+        {
+          "saida": "slide_up",
+          "entrada": "slide_up"
+        },
+        {
+          "saida": "slide_down",
+          "entrada": "slide_down"
+        },
+        {
+          "saida": "drop",
+          "entrada": "spring_in"
+        }
+      ]
+    },
+    {
+      "id": "zoom",
+      "nome": "Zoom (chega crescendo)",
+      "intensidade": 2,
+      "itens": [
+        "zoom_in",
+        "zoom_out",
+        "pop",
+        "punch_in"
+      ],
+      "pares": [
+        {
+          "saida": "zoom_out",
+          "entrada": "zoom_in"
+        },
+        {
+          "saida": "pop",
+          "entrada": "zoom_in"
+        },
+        {
+          "saida": "zoom_in",
+          "entrada": "punch_in"
+        }
+      ]
+    },
+    {
+      "id": "impacto",
+      "nome": "Impacto",
+      "intensidade": 4,
+      "itens": [
+        "flash",
+        "shockwave",
+        "tv_on",
+        "spin",
+        "flip_3d"
+      ],
+      "pares": [
+        {
+          "saida": "flash",
+          "entrada": "flash"
+        },
+        {
+          "saida": "tv_on",
+          "entrada": "tv_on"
+        },
+        {
+          "saida": "spin",
+          "entrada": "flip_3d"
+        },
+        {
+          "saida": "flash",
+          "entrada": "shockwave"
+        }
+      ]
+    },
+    {
+      "id": "agito",
+      "nome": "Agito",
+      "intensidade": 3,
+      "itens": [
+        "shake",
+        "vibration",
+        "wobble",
+        "swing"
+      ],
+      "pares": [
+        {
+          "saida": "shake",
+          "entrada": "vibration"
+        },
+        {
+          "saida": "wobble",
+          "entrada": "swing"
+        }
+      ]
+    }
+  ],
+  "regras": [
+    "duração da animação ≤ 35% da cena",
+    "nunca em junção com transição",
+    "continuidade de direção numa sequência (todas slide_left, não alternar esquerda/direita)"
+  ]
+}

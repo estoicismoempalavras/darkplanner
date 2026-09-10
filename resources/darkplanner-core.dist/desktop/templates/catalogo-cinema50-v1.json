@@ -1,0 +1,2572 @@
+[
+  {
+    "id": "C30_GATE_RESPIRA",
+    "nome": "Cena - Portal Anamórfico",
+    "durS": 4,
+    "slots": 1,
+    "thumb": "C30_GATE_RESPIRA.jpeg",
+    "preencher": "tempo",
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "wh_breath_2.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.75,
+        "volume": 0.055,
+        "srcStartS": 0
+      }
+    ]
+  },
+  {
+    "id": "C30_FENDA_TRAVELLING",
+    "nome": "Cena - Travelling de Janela",
+    "durS": 4,
+    "slots": 1,
+    "thumb": "C30_FENDA_TRAVELLING.jpeg",
+    "preencher": "tempo",
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "wh_cinema_4.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.75,
+        "volume": 0.055,
+        "srcStartS": 0.035
+      }
+    ]
+  },
+  {
+    "id": "C30_MARGEM_MUTANTE",
+    "nome": "Cena - Margem que Conta",
+    "durS": 4,
+    "slots": 1,
+    "thumb": "C30_MARGEM_MUTANTE.jpeg",
+    "preencher": "tempo",
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "pop_ui_2.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.4,
+        "volume": 0.07,
+        "srcStartS": 0.019
+      }
+    ]
+  },
+  {
+    "id": "C30_IRIS_EXCENTRICA",
+    "nome": "Cena - Íris de Descoberta",
+    "durS": 4,
+    "slots": 1,
+    "thumb": "C30_IRIS_EXCENTRICA.jpeg",
+    "preencher": "tempo",
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "wh_breath_3.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.75,
+        "volume": 0.055,
+        "srcStartS": 0.005
+      }
+    ]
+  },
+  {
+    "id": "C30_LUZ_ARQUITETONICA",
+    "nome": "Cena - Luz de Galeria",
+    "durS": 4,
+    "slots": 1,
+    "thumb": "C30_LUZ_ARQUITETONICA.jpeg",
+    "preencher": "tempo",
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": []
+  },
+  {
+    "id": "C30_PAPEL_DESDOBRA",
+    "nome": "Cena - Papel Deslizante",
+    "durS": 4,
+    "slots": 1,
+    "thumb": "C30_PAPEL_DESDOBRA.jpeg",
+    "preencher": "tempo",
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "wh_breath_4.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.75,
+        "volume": 0.055,
+        "srcStartS": 0.015
+      }
+    ]
+  },
+  {
+    "id": "C30_MATTE_ORGANICO",
+    "nome": "Cena - Halo Orgânico",
+    "durS": 4,
+    "slots": 1,
+    "thumb": "C30_MATTE_ORGANICO.jpeg",
+    "preencher": "tempo",
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "wh_breath_3.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.75,
+        "volume": 0.055,
+        "srcStartS": 0.005
+      }
+    ]
+  },
+  {
+    "id": "C30_PROJETOR",
+    "nome": "Cena - Projeção Frontal",
+    "durS": 4,
+    "slots": 1,
+    "thumb": "C30_PROJETOR.jpeg",
+    "preencher": "tempo",
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "camera_13.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.75,
+        "volume": 0.055,
+        "srcStartS": 0.383
+      }
+    ]
+  },
+  {
+    "id": "C30_PANORAMA_INTEGRO",
+    "nome": "Cena - Panorama Integral",
+    "durS": 4,
+    "slots": 1,
+    "thumb": "C30_PANORAMA_INTEGRO.jpeg",
+    "preencher": "tempo",
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": []
+  },
+  {
+    "id": "C30_LUPA_VINCULADA",
+    "nome": "Cena - Detalhe Vinculado",
+    "durS": 4,
+    "slots": 1,
+    "thumb": "C30_LUPA_VINCULADA.jpeg",
+    "preencher": "tempo",
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "click_ms_1.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.4,
+        "volume": 0.07,
+        "srcStartS": 0.028
+      }
+    ]
+  },
+  {
+    "id": "C30_SEPTO_VIVO",
+    "nome": "Take - Divisória Viva",
+    "durS": 4,
+    "slots": 2,
+    "thumb": "C30_SEPTO_VIVO.jpeg",
+    "cicloTakes": 2,
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 1,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "wh_cinema_6.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.75,
+        "volume": 0.055,
+        "srcStartS": 0.038
+      }
+    ]
+  },
+  {
+    "id": "C30_LAMINA_OBLIQUA",
+    "nome": "Take - Lâmina Oblíqua",
+    "durS": 4,
+    "slots": 2,
+    "thumb": "C30_LAMINA_OBLIQUA.jpeg",
+    "cicloTakes": 2,
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 1,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "wh_cinema_12.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.75,
+        "volume": 0.055,
+        "srcStartS": 0.002
+      }
+    ]
+  },
+  {
+    "id": "C30_FAIXAS_ENTRELACADAS",
+    "nome": "Take - Faixas Entrelaçadas",
+    "durS": 4,
+    "slots": 2,
+    "thumb": "C30_FAIXAS_ENTRELACADAS.jpeg",
+    "cicloTakes": 2,
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 1,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "wh_digital_2.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.75,
+        "volume": 0.055,
+        "srcStartS": 0.013
+      }
+    ]
+  },
+  {
+    "id": "C30_ARCOS_GEMEOS",
+    "nome": "Take - Pórticos Suaves",
+    "durS": 4,
+    "slots": 2,
+    "thumb": "C30_ARCOS_GEMEOS.jpeg",
+    "cicloTakes": 2,
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 1,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "wh_breath_2.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.75,
+        "volume": 0.055,
+        "srcStartS": 0
+      }
+    ]
+  },
+  {
+    "id": "C30_ORBITAS_TANGENTES",
+    "nome": "Take - Órbitas Tangentes",
+    "durS": 4,
+    "slots": 2,
+    "thumb": "C30_ORBITAS_TANGENTES.jpeg",
+    "cicloTakes": 2,
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 1,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "wh_cinema_14.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.75,
+        "volume": 0.055,
+        "srcStartS": 0.017
+      }
+    ]
+  },
+  {
+    "id": "C30_DIALOGO_RESPONSIVO",
+    "nome": "Take - Retratos em Contracampo",
+    "durS": 4,
+    "slots": 2,
+    "thumb": "C30_DIALOGO_RESPONSIVO.jpeg",
+    "cicloTakes": 2,
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 1,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": []
+  },
+  {
+    "id": "C30_VARREDURA_REGISTRADA",
+    "nome": "Take - Comparador de Varredura",
+    "durS": 4,
+    "slots": 2,
+    "thumb": "C30_VARREDURA_REGISTRADA.jpeg",
+    "cicloTakes": 2,
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 1,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "wh_digital_1.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.75,
+        "volume": 0.055,
+        "srcStartS": 0.016
+      }
+    ]
+  },
+  {
+    "id": "C30_DOBRA_CENTRAL",
+    "nome": "Take - Díptico de Lombada",
+    "durS": 4,
+    "slots": 2,
+    "thumb": "C30_DOBRA_CENTRAL.jpeg",
+    "cicloTakes": 2,
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 1,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "wh_breath_4.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.75,
+        "volume": 0.055,
+        "srcStartS": 0.015
+      }
+    ]
+  },
+  {
+    "id": "C30_CONTEXTO_E_MACRO",
+    "nome": "Take - Contexto & Macro",
+    "durS": 4,
+    "slots": 2,
+    "thumb": "C30_CONTEXTO_E_MACRO.jpeg",
+    "cicloTakes": 2,
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 1,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "pop_click_1.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.4,
+        "volume": 0.07,
+        "srcStartS": 0.019
+      }
+    ]
+  },
+  {
+    "id": "C30_DIPTICO_INTEGRO",
+    "nome": "Take - Díptico Integral",
+    "durS": 4,
+    "slots": 2,
+    "thumb": "C30_DIPTICO_INTEGRO.jpeg",
+    "cicloTakes": 2,
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 1,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": []
+  },
+  {
+    "id": "C30_JANELA_DESACOPLA",
+    "nome": "Take - Janela que se Desprende",
+    "durS": 4,
+    "slots": 2,
+    "thumb": "C30_JANELA_DESACOPLA.jpeg",
+    "cicloTakes": 2,
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 1,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "wh_cinema_16.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.75,
+        "volume": 0.055,
+        "srcStartS": 0.022
+      }
+    ]
+  },
+  {
+    "id": "C30_GALERIA_PERSPECTIVA",
+    "nome": "Take - Galeria em Planos",
+    "durS": 4,
+    "slots": 2,
+    "thumb": "C30_GALERIA_PERSPECTIVA.jpeg",
+    "cicloTakes": 2,
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 1,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "wh_cinema_17.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.75,
+        "volume": 0.055,
+        "srcStartS": 0.066
+      }
+    ]
+  },
+  {
+    "id": "C30_TRIPTICO_DOMINANCIA",
+    "nome": "Take - Tríptico de Dominância",
+    "durS": 4,
+    "slots": 3,
+    "thumb": "C30_TRIPTICO_DOMINANCIA.jpeg",
+    "cicloTakes": 3,
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 1,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 2,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "wh_cinema_19.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.75,
+        "volume": 0.055,
+        "srcStartS": 0.104
+      }
+    ]
+  },
+  {
+    "id": "C30_PERCURSO_L",
+    "nome": "Take - Percurso em L",
+    "durS": 4,
+    "slots": 3,
+    "thumb": "C30_PERCURSO_L.jpeg",
+    "cicloTakes": 3,
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 1,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 2,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "pop_multi_1.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.4,
+        "volume": 0.07,
+        "srcStartS": 0.002
+      }
+    ]
+  },
+  {
+    "id": "C30_ATLAS_HEXAGONAL",
+    "nome": "Take - Atlas de Losangos",
+    "durS": 4,
+    "slots": 3,
+    "thumb": "C30_ATLAS_HEXAGONAL.jpeg",
+    "cicloTakes": 3,
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 1,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 2,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "pop_on_1.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.4,
+        "volume": 0.07,
+        "srcStartS": 0.025
+      }
+    ]
+  },
+  {
+    "id": "C30_OCUSAO_CONTINUA",
+    "nome": "Take - Montagem por Oclusão",
+    "durS": 4,
+    "slots": 3,
+    "thumb": "C30_OCUSAO_CONTINUA.jpeg",
+    "cicloTakes": 3,
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 1,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 2,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "wh_cinema_20.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.75,
+        "volume": 0.055,
+        "srcStartS": 0.002
+      }
+    ]
+  },
+  {
+    "id": "C30_ESTEIRA_FOTOGRAMAS",
+    "nome": "Take - Esteira de Fotogramas",
+    "durS": 4,
+    "slots": 3,
+    "thumb": "C30_ESTEIRA_FOTOGRAMAS.jpeg",
+    "cicloTakes": 3,
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 1,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 2,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "catraca_1.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.75,
+        "volume": 0.055,
+        "srcStartS": 0.033
+      }
+    ]
+  },
+  {
+    "id": "C30_CONSTELACAO",
+    "nome": "Take - Constelação de Relações",
+    "durS": 4,
+    "slots": 3,
+    "thumb": "C30_CONSTELACAO.jpeg",
+    "cicloTakes": 3,
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 1,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 2,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "click_ms_2.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.4,
+        "volume": 0.07,
+        "srcStartS": 0.011
+      }
+    ]
+  },
+  {
+    "id": "C30_MESA_LUZ",
+    "nome": "Take - Mesa de Luz",
+    "durS": 4,
+    "slots": 3,
+    "thumb": "C30_MESA_LUZ.jpeg",
+    "cicloTakes": 3,
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 1,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 2,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": []
+  },
+  {
+    "id": "C30_CADENCIA_TRES_ATOS",
+    "nome": "Take - Cadência em Três Atos",
+    "durS": 4,
+    "slots": 3,
+    "thumb": "C30_CADENCIA_TRES_ATOS.jpeg",
+    "cicloTakes": 3,
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 1,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 2,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "wh_cinema_1.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.75,
+        "volume": 0.055,
+        "srcStartS": 0.026
+      }
+    ]
+  },
+  {
+    "id": "C50_GRID_CATAVENTO",
+    "nome": "Take - Catavento Editorial",
+    "durS": 4,
+    "slots": 4,
+    "thumb": "C50_GRID_CATAVENTO.jpeg",
+    "cicloTakes": 4,
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 1,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 2,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 3,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "wh_digital_3.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.75,
+        "volume": 0.055,
+        "srcStartS": 0.024
+      }
+    ]
+  },
+  {
+    "id": "C50_GRID_JUNTAS",
+    "nome": "Take - Juntas Deslizantes",
+    "durS": 4,
+    "slots": 4,
+    "thumb": "C50_GRID_JUNTAS.jpeg",
+    "cicloTakes": 4,
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 1,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 2,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 3,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "wh_digital_4.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.75,
+        "volume": 0.055,
+        "srcStartS": 0.039
+      }
+    ]
+  },
+  {
+    "id": "C50_GRID_CANAIS",
+    "nome": "Take - Canais de Revista",
+    "durS": 4,
+    "slots": 4,
+    "thumb": "C50_GRID_CANAIS.jpeg",
+    "cicloTakes": 4,
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 1,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 2,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 3,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "click_ms_1.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.4,
+        "volume": 0.07,
+        "srcStartS": 0.028
+      }
+    ]
+  },
+  {
+    "id": "C50_GRID_ROSACEA",
+    "nome": "Take - Rosácea de Quatro",
+    "durS": 4,
+    "slots": 4,
+    "thumb": "C50_GRID_ROSACEA.jpeg",
+    "cicloTakes": 4,
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 1,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 2,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 3,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "wh_breath_3.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.75,
+        "volume": 0.055,
+        "srcStartS": 0.005
+      }
+    ]
+  },
+  {
+    "id": "C50_GRID_SERRA",
+    "nome": "Take - Três Planos em Viés",
+    "durS": 4,
+    "slots": 3,
+    "thumb": "C50_GRID_SERRA.jpeg",
+    "cicloTakes": 3,
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 1,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 2,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "wh_cinema_8.wav",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.75,
+        "volume": 0.055,
+        "srcStartS": 0.013
+      }
+    ]
+  },
+  {
+    "id": "C50_GRID_PILAR_OCULOS",
+    "nome": "Take - Pilar e Óculos",
+    "durS": 4,
+    "slots": 3,
+    "thumb": "C50_GRID_PILAR_OCULOS.jpeg",
+    "cicloTakes": 3,
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 1,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 2,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "pop_click_2.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.4,
+        "volume": 0.07,
+        "srcStartS": 0.002
+      }
+    ]
+  },
+  {
+    "id": "C50_GRID_DIAGONAIS",
+    "nome": "Take - Losangos em Cruz",
+    "durS": 4,
+    "slots": 4,
+    "thumb": "C50_GRID_DIAGONAIS.jpeg",
+    "cicloTakes": 4,
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 1,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 2,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 3,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "wh_digital_5.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.75,
+        "volume": 0.055,
+        "srcStartS": 0.051
+      }
+    ]
+  },
+  {
+    "id": "C50_GRID_TRAMA_FLUIDA",
+    "nome": "Take - Faixas em Contrafluxo",
+    "durS": 4,
+    "slots": 3,
+    "thumb": "C50_GRID_TRAMA_FLUIDA.jpeg",
+    "cicloTakes": 3,
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 1,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 2,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "wh_cinema_6.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.75,
+        "volume": 0.055,
+        "srcStartS": 0.038
+      }
+    ]
+  },
+  {
+    "id": "C50_DUPLA_CHEVRONS",
+    "nome": "Take - Dupla em Ângulo Aberto",
+    "durS": 4,
+    "slots": 2,
+    "thumb": "C50_DUPLA_CHEVRONS.jpeg",
+    "cicloTakes": 2,
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 1,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "wh_cinema_12.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.75,
+        "volume": 0.055,
+        "srcStartS": 0.002
+      }
+    ]
+  },
+  {
+    "id": "C50_DUPLA_FAIXA_PASSANTE",
+    "nome": "Take - Faixa Passante",
+    "durS": 4,
+    "slots": 2,
+    "thumb": "C50_DUPLA_FAIXA_PASSANTE.jpeg",
+    "cicloTakes": 2,
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 1,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "wh_digital_6.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.75,
+        "volume": 0.055,
+        "srcStartS": 0.018
+      }
+    ]
+  },
+  {
+    "id": "C50_DUPLA_CAPSULAS",
+    "nome": "Take - Cápsulas em Ponte",
+    "durS": 4,
+    "slots": 2,
+    "thumb": "C50_DUPLA_CAPSULAS.jpeg",
+    "cicloTakes": 2,
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 1,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "pop_ui_11.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.4,
+        "volume": 0.07,
+        "srcStartS": 0.01
+      }
+    ]
+  },
+  {
+    "id": "C50_DUPLA_BRUMA",
+    "nome": "Take - Encontro em Bruma",
+    "durS": 4,
+    "slots": 2,
+    "thumb": "C50_DUPLA_BRUMA.jpeg",
+    "cicloTakes": 2,
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 1,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "wh_breath_4.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.75,
+        "volume": 0.055,
+        "srcStartS": 0.015
+      }
+    ]
+  },
+  {
+    "id": "C50_DUPLA_ENCAIXES",
+    "nome": "Take - Janela Circular Encaixada",
+    "durS": 4,
+    "slots": 2,
+    "thumb": "C50_DUPLA_ENCAIXES.jpeg",
+    "cicloTakes": 2,
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 1,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "pop_on_1.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.4,
+        "volume": 0.07,
+        "srcStartS": 0.025
+      }
+    ]
+  },
+  {
+    "id": "C50_DUPLA_SOBREIMPRESSAO",
+    "nome": "Take - Sobreimpressão Contida",
+    "durS": 4,
+    "slots": 2,
+    "thumb": "C50_DUPLA_SOBREIMPRESSAO.jpeg",
+    "cicloTakes": 2,
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      },
+      {
+        "slot": 1,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "wh_breath_2.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.75,
+        "volume": 0.055,
+        "srcStartS": 0
+      }
+    ]
+  },
+  {
+    "id": "C50_SOCIAL_BALAO",
+    "nome": "Cena - Balão Editorial",
+    "durS": 4,
+    "slots": 1,
+    "thumb": "C50_SOCIAL_BALAO.jpeg",
+    "preencher": "tempo",
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "pop_1.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.4,
+        "volume": 0.07,
+        "srcStartS": 0.105
+      }
+    ]
+  },
+  {
+    "id": "C50_SOCIAL_BILHETE",
+    "nome": "Cena - Bilhete Perfurado",
+    "durS": 4,
+    "slots": 1,
+    "thumb": "C50_SOCIAL_BILHETE.jpeg",
+    "preencher": "tempo",
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "pop_click_3.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.4,
+        "volume": 0.07,
+        "srcStartS": 0.001
+      }
+    ]
+  },
+  {
+    "id": "C50_CINTA_CURVA",
+    "nome": "Cena - Cinta Lenticular",
+    "durS": 4,
+    "slots": 1,
+    "thumb": "C50_CINTA_CURVA.jpeg",
+    "preencher": "tempo",
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "wh_cinema_14.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.75,
+        "volume": 0.055,
+        "srcStartS": 0.017
+      }
+    ]
+  },
+  {
+    "id": "C50_JANELA_DEGRAUS",
+    "nome": "Cena - Janela em Degraus",
+    "durS": 4,
+    "slots": 1,
+    "thumb": "C50_JANELA_DEGRAUS.jpeg",
+    "preencher": "tempo",
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "wh_digital_8.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.75,
+        "volume": 0.055,
+        "srcStartS": 0.025
+      }
+    ]
+  },
+  {
+    "id": "C50_ANEL_IMAGEM",
+    "nome": "Cena - Anel de Imagem",
+    "durS": 4,
+    "slots": 1,
+    "thumb": "C50_ANEL_IMAGEM.jpeg",
+    "preencher": "tempo",
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "wh_breath_3.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.75,
+        "volume": 0.055,
+        "srcStartS": 0.005
+      }
+    ]
+  },
+  {
+    "id": "C50_VENEZIANAS_IMAGEM",
+    "nome": "Cena - Venezianas de Imagem",
+    "durS": 4,
+    "slots": 1,
+    "thumb": "C50_VENEZIANAS_IMAGEM.jpeg",
+    "preencher": "tempo",
+    "durPelaJanela": true,
+    "pronto": true,
+    "cobreLegenda": false,
+    "cenas": [
+      {
+        "slot": 0,
+        "startS": 0,
+        "durationS": "full",
+        "transform": null,
+        "rotate": 0,
+        "opacity": 1,
+        "flipH": false,
+        "mask": null,
+        "animIn": null,
+        "animOut": null,
+        "kfs": null
+      }
+    ],
+    "texts": [],
+    "shapes": [],
+    "audios": [
+      {
+        "arq": "wh_digital_9.mp3",
+        "naEntrada": true,
+        "startS": 0,
+        "durationS": 0.75,
+        "volume": 0.055,
+        "srcStartS": 0.013
+      }
+    ]
+  }
+]
